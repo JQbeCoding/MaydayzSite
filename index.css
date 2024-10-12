@@ -1,0 +1,102 @@
+
+body{
+    background: black url("Background.png");
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+@font-face {
+    font-family: FontA;
+    src: url("FIRES\ PERSONAL\ USE.ttf");
+}
+@font-face {
+    font-family: FontB;
+    src: url("Ricebox\ Allcaps.ttf");
+}
+h1{
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: white;
+    font-size: 50px;
+     text-align:center ;
+     font-family: FontA ;
+     color:red;
+     transform: translateY(-100%);
+}
+h2{
+    font-family: FontB;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: rgb(251, 0, 0);
+    text-align:center ;
+    font-size: 30px;
+    color:white;
+    transform: translateY(-250%);
+}
+#tabs {
+    margin: 50px;
+    text-align: center;
+}
+#Smalltabs{
+    font-family: FontB;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: rgb(251, 0, 0);
+    font-size: 25px;
+    color:white;
+}
+.button{
+    background-color: red;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: FontB;
+    padding:25px 25px;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    animation-name: OrderMove;
+    animation: OrderMove 4s infinite;
+    /*Pride:
+    animation: OrderMove 6s infinite*/
+
+}
+.button2{
+    background-color: red;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: FontB;
+    padding:.25px .30px;
+}
+.button{border-radius: 12px;}
+@keyframes OrderMove {
+    0% {bottom: 10%;} /*Default*/
+    50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
+    100%{bottom: 10%;}
+    
+    /*Pride Code:
+    25%{border-bottom-right-radius: 200px ; background-color: aqua;}
+    35%{background-color: pink; color: white;}
+    50% {border-bottom-right-radius: 200px; background-color: purple; color: white;}
+    75%{background-color: green; color: white;}
+    90%{background-color: yellow; color: black;}
+    100% {bottom: 10%; background-color: red;}*/
+
+}
+.button:hover {
+    background-color: white;
+    color:red;
+}
+footer{
+font-family:'Courier New', Courier, monospace;
+color: white;
+text-align: center;
+margin-bottom: 0;
+font-size: 10px;
+transform: translate(0%, 500%);
+}
