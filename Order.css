@@ -25,15 +25,15 @@ h2{
     font-family: FontB;
     color: red;
 }
-#Plates{
-    font-family: FontB;
-    font-size: 20px;
-    color: red;
+#Platez{
+    display: flex;
+    justify-content: space-around;
+    padding: 120px;
 }
-#Apps{
-    font-family: FontB;
-    font-size: 20px;
-    color: red;
+#Appz{
+    display: flex;
+    justify-content: space-around;
+    padding: 120px;
 }
 #Tabs{
     font-family: FontB;
@@ -45,12 +45,10 @@ h2{
     justify-content: space-around; 
     margin: 20px 0;
 }
-
-
-#Desserts{
-    font-family: FontB;
-    font-size: 20px;
-    color: red;
+#Dessertz{
+    display: flex;
+    justify-content: space-around;
+    padding: 120px;
 }
 footer{
     font-family:'Courier New', Courier, monospace;
@@ -63,82 +61,70 @@ footer{
     background-color: #000; 
     padding: 15px;   
     width: auto;
-}
-.Pbutton1{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-.Pbutton2{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-.Abutton1{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-.Abutton2{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-.Dbutton1{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-.Dbutton2{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-}
-#prices{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
+    margin-bottom: auto;
 }
 
-#FeaturedItems{
+.Pbutton{
     padding:45px 50px;
+    margin: 4px 2px;
     background-color: white;
+    color: red;
     text-align: center;
     align-items: center;
     height:250px;
     width:250px;
     font-size: 35px;
     font-family: FontB;
+    padding: 40px;
 }
-.FeaturedButton{
+.Abutton{
+    padding:45px 50px;
+    margin: 4px 2px;
+    background-color: white;
+    color: red;
+    text-align: center;
+    align-items: center;
+    height:250px;
+    width:250px;
+    font-size: 35px;
+    font-family: FontB;
+    padding: 40px;
+}
+.Dbutton{
+    padding:45px 50px;
+    margin: 4px 2px;
+    background-color: white;
+    color: red;
+    text-align: center;
+    align-items: center;
+    height:250px;
+    width:250px;
+    font-size: 35px;
+    font-family: FontB;
+    padding: 40px;
+}
+#prices{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+}
+#FeaturedItems {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+#FeaturedItem1, #FeaturedItem2 {
+    padding: 50px;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-family: FontB;
+    height: 250px;
+    width: 250px;
+    font-size: 35px;
+}
+.back{
+    padding: 10px 10px;
+    font-family: FontA;
     background-color: red;
+    color: white;
 }
