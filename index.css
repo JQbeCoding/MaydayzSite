@@ -38,9 +38,9 @@ h2{
 #Smalltabs{
     font-family: FontB;
     -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: rgb(251, 0, 0);
+    -webkit-text-stroke-color: white;
     font-size: 25px;
-    color:white;
+    color: black;
 }
 .button{
     background-color: red;
@@ -75,9 +75,9 @@ h2{
 }
 .button{border-radius: 12px;}
 @keyframes OrderMove {
-    0% {bottom: 10%;} /*Default*/
+    0% {bottom: 10%; border-bottom-right-radius: 10px;} /*Default*/
     50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
-    100%{bottom: 10%;}
+    100%{bottom: 10%; border-bottom-right-radius: 10px;}
     
     /*Pride Code:
     25%{border-bottom-right-radius: 200px ; background-color: aqua;}
@@ -98,5 +98,5 @@ color: white;
 text-align: center;
 margin-bottom: 0;
 font-size: 10px;
-transform: translate(0%, 500%);
+transform: translate(0%,450%);
 }

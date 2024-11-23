@@ -9,7 +9,7 @@
 }
 body{
     background: url("OrderBackground.png");
-    background-size: cover;
+    background-size: auto;
 }
 h1{
     font-family: FontA;
@@ -56,12 +56,15 @@ footer{
     text-align: right;
     margin-bottom: 0;
     font-size: 10px;
+    translate: (0%,500%);
 }
 #Footer {
     background-color: #000; 
     padding: 15px;   
+    margin: 23px, 5px;
     width: auto;
-    margin-bottom: auto;
+    margin-bottom: 0;
+    transform: translate(0%, 100%);
 }
 
 .Pbutton{
