@@ -1,5 +1,6 @@
 body{
-    background: url(OrderBackground.png);
+    background: url(MenuBackground.png);
+    background-size: cover;
 }
 
 #Menu{
@@ -7,6 +8,7 @@ body{
     text-align: center;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: red;
+    cursor: pointer;
 }
 
 @font-face {
@@ -30,9 +32,6 @@ h1{
     border: #000;
     justify-content: center;
     padding: 10px;
-
-    
-    
     
 }
 
@@ -41,7 +40,7 @@ h1{
     padding: 15px;   
     margin: 23px, 5px;
     width: auto;
-    margin-bottom: 0;
+    margin-bottom: 10;
     transform: translate(0%, 100%);
 }
 
