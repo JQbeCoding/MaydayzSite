@@ -1,7 +1,3 @@
-var platezPayment = document.getElementById(paymentProcess)
-
-window.onclick = function (process){
-    if(process.target == platezPayment){
-        modal.style.display = "none";
-    }
+function openPayment(){
+   onclick(window.open("https://www.google.com/?client=safari"));
 }
