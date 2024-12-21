@@ -8,6 +8,10 @@ body{
     text-align: center;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: red;
+    
+}
+
+#MenuImage{
     cursor: pointer;
 }
 
