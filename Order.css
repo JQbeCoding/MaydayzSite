@@ -26,7 +26,7 @@ h2{
     color: red;
 }
 #Platez{
-    display: flex;
+    display:flex;
     justify-content: space-around;
     padding: 120px;
 }
@@ -114,6 +114,7 @@ footer{
     margin: 4px 2px;
     background-color: grey;
     color: red;
+    filter:grayscale();
     text-align: center;
     align-items: center;
     height:250px;

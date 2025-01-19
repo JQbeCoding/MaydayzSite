@@ -30,3 +30,6 @@ function openPulledPorkPayment(){
 function openPorkChopPayment(){
    onclick(window.open("https://square.link/u/5GRCttGm", "Pork Chop Plate", "width=500,height=500"))
 }
+function openPulledChickenPayment(){
+   onclick(window.open("https://square.link/u/D2zoTAFF", "Pork Chop Plate", "width=500,height=500"))
+}
