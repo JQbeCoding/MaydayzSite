@@ -71,48 +71,28 @@ footer{
     transform: translate(0%, 100%);
 }
 
-.Pbutton{
+.Items{
     padding:30px;
     margin: 4px 2px;
-    background-color: white;
-    color: red;
+    background-color: red;
+    color: black;
     text-align: center;
     align-items: center;
-    height:250px;
+    height:280px;
     width:250px;
     font-size: 35px;
     font-family: FontB;
     padding: 40px;
     cursor: pointer;
+    animation-name: OrderMove;
+    animation: OrderMove 4s infinite;
 }
-.Abutton{
-    padding:30px;
-    margin: 4px 2px;
-    background-color: white;
-    color: red;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-    font-family: FontB;
-    padding: 40px;
-    cursor: pointer;
+
+@keyframes OrderMove {
+    /*Default*/
+    50%{background-color: white; color: red;}
 }
-.Dbutton{
-    padding:45px 50px;
-    margin: 4px 2px;
-    background-color: white;
-    color: red;
-    text-align: center;
-    align-items: center;
-    height:250px;
-    width:250px;
-    font-size: 35px;
-    font-family: FontB;
-    padding: 40px;
-    cursor: pointer;
-}
+
 .Unavailable{
     padding:45px 50px;
     margin: 4px 2px;
@@ -121,7 +101,7 @@ footer{
     filter:grayscale();
     text-align: center;
     align-items: center;
-    height:250px;
+    height:280px;
     width:250px;
     font-size: 35px;
     font-family: FontB;
@@ -155,12 +135,19 @@ footer{
     color: gold;
     text-align: center;
     align-items: center;
-    height:250px;
+    height:280px;
     width:250px;
     font-size: 35px;
     font-family: FontB;
     padding: 40px;
     cursor: pointer;
+    animation-name: FeaturedMove;
+    animation: FeaturedMove 3s infinite;
+}
+
+@keyframes FeaturedMove {
+    /*Default*/
+    50%{background-color: gold; color: red}
 }
 
 .back{

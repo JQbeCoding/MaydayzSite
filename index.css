@@ -4,6 +4,10 @@ body{
     background-size: cover;
     opacity: 1;
     transition: opacity 1s ease-out;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
 }
 @font-face {
     font-family: FontA;
@@ -45,22 +49,21 @@ h2{
 #Order{
     padding: 10px;
     margin: 10px;
-    transform: translate(45%, 0px);
+
 
 }
 .button{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: red;
-    text-align: center;
     border: none;
     color: white;
     font-family: FontB;
-    padding:25px 25px;
+    padding: 25px 25px;
     font-size: 15px;
-    margin: 4px 2px;
     cursor: pointer;
-    transition-duration: 0.4s;
-    align-items: center;
-    position: absolute;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
     /*Pride:
@@ -77,9 +80,9 @@ h2{
 }
 .button{border-radius: 12px;}
 @keyframes OrderMove {
-    0% {bottom: 10%; border-bottom-right-radius: 10px;} /*Default*/
+    0% { border-bottom-right-radius: 10px;} /*Default*/
     50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
-    100%{bottom: 10%; border-bottom-right-radius: 10px;}
+    100%{ border-bottom-right-radius: 10px;}
     
     /*Pride Code:
     25%{border-bottom-right-radius: 200px ; background-color: aqua;}
