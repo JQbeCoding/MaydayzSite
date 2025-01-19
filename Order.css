@@ -47,8 +47,7 @@ h2{
     padding: auto;
     background-color: black;
     display: flex;
-    justify-content: space-around; 
-    margin: 20px 0;
+    justify-content: space-around;
 }
 #Dessertz{
     display: flex;
