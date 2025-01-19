@@ -61,6 +61,7 @@ footer{
     margin-bottom: 0px;
     font-size: 10px;
     translate: (0%,500%);
+
 }
 #Footer {
     background-color: #000; 
@@ -84,6 +85,7 @@ footer{
     font-family: FontB;
     padding: 40px;
     cursor: pointer;
+    border-radius: 12px;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
 }
@@ -141,6 +143,7 @@ footer{
     font-family: FontB;
     padding: 40px;
     cursor: pointer;
+    border-radius: 12px;
     animation-name: FeaturedMove;
     animation: FeaturedMove 3s infinite;
 }

@@ -62,6 +62,7 @@ h2{
     padding: 25px 25px;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 12px;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
 }
@@ -88,9 +89,11 @@ h2{
     font-family: FontB;
     padding:10px;
 }
+
 .button{border-radius: 12px;}
+
 @keyframes OrderMove {
-    0% { border-bottom-right-radius: 10px;} /*Default*/
+    0% { border-bottom-right-radius: 10px;} 
     50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
     100%{ border-bottom-right-radius: 10px;}
 }
