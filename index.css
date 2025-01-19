@@ -49,8 +49,6 @@ h2{
 #Order{
     padding: 10px;
     margin: 10px;
-
-
 }
 .button{
     position: absolute;
@@ -66,9 +64,21 @@ h2{
     cursor: pointer;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
-    /*Pride:
-    animation: OrderMove 6s infinite*/
-
+}
+.Pride{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: FontB;
+    padding: 25px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    animation-name:Pride;
+    animation: Pride 6s infinite
 }
 .button2{
     background-color: red;
@@ -83,15 +93,15 @@ h2{
     0% { border-bottom-right-radius: 10px;} /*Default*/
     50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
     100%{ border-bottom-right-radius: 10px;}
-    
-    /*Pride Code:
+}
+
+@keyframes Pride{
     25%{border-bottom-right-radius: 200px ; background-color: aqua;}
     35%{background-color: pink; color: white;}
     50% {border-bottom-right-radius: 200px; background-color: purple; color: white;}
     75%{background-color: green; color: white;}
     90%{background-color: yellow; color: black;}
-    100% {bottom: 10%; background-color: red;}*/
-
+    100% {background-color: red;}
 }
 .button:hover {
     background-color: white;
