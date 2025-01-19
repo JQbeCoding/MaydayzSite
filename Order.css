@@ -147,8 +147,8 @@ footer{
 .FeaturedItems{
     padding:30px 50px;
     margin: 4px 2px;
-    background-color: white;
-    color: red;
+    background-color: red;
+    color: gold;
     text-align: center;
     align-items: center;
     height:250px;
@@ -156,6 +156,7 @@ footer{
     font-size: 35px;
     font-family: FontB;
     padding: 40px;
+    cursor: pointer;
 }
 
 .back{
@@ -164,6 +165,9 @@ footer{
     background-color: red;
     color: white;
 }
+
+
+
 .IG{
     cursor: pointer;
 }
