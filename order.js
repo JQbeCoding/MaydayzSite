@@ -21,6 +21,9 @@ function openCakePayment(){
 function openCobblerPayment(){
    onclick(window.open("https://square.link/u/EWZdQQbf","Cobbler" ,"width=500,height=500,top=150,left=375"))
 }
+function openPeachCobblerPayment(){
+   onclick(window.open("https://square.link/u/7J9qeSCt","Cobbler" ,"width=500,height=500,top=150,left=375"))
+}
 function openRibPlatePayment(){
    onclick(window.open("https://square.link/u/06cF8aZF","Rib Plate", "width=500,height=500,top=150,left=375" ))
 }
