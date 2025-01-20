@@ -7,6 +7,10 @@
     font-family: FontB ;
     src: url(Ricebox\ Allcaps.ttf);
 }
+@font-face {
+    font-family: FontC;
+    src: url(Pridi-Bold.ttf);
+}
 
 body{
     background: url(OrderBackground.png);
@@ -30,14 +34,24 @@ h1{
 
 }
 p{
-    font-family: FontB;
+    font-family: FontC;
     color:white;
     text-align: center;
+}
+#Description{
+    font-family: FontB;
+}
+#price{
+    text-align: center;
+    color: red;
+    font-family: FontC;
+    font-size: 40px;
 }
 .drinks{
     font-family: FontB;
     color:white;
     text-align: center;
+    list-style-type: none;
 }
 .meats{
     font-family: FontB;
@@ -48,4 +62,21 @@ p{
     font-family: FontB;
     color:white;
     text-align: center;
+    list-style-type: none;
+}
+button{
+    background-color: red;
+    text-align: center;
+    border: none;
+    color: white;
+    font-family: FontB;
+    padding:10px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+}
+button:hover {
+    background-color: white;
+    color:red;
 }

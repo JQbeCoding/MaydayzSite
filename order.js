@@ -1,5 +1,5 @@
 function openSamplerPayment(){
-   onclick(window.open("https://square.link/u/DiLFGufU",  "Sampler","width=700,height=500,top=150,left=375"));
+   onclick(window.open("DaSampler.html",  "Sampler","width=700,height=500,top=150,left=375"));
 }
 
 function openPlatesPayment(){
@@ -28,7 +28,7 @@ function openPulledPorkPayment(){
    onclick(window.open("https://square.link/u/WPbCdn1F", "Pulled Pork", "width=500,height=500,top=150,left=375"))
 }
 function openPorkChopPayment(){
-   onclick(window.open("https://square.link/u/5GRCttGm", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
+   onclick(window.open("Porkchop.html", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
 }
 function openPulledChickenPayment(){
    onclick(window.open("https://square.link/u/D2zoTAFF", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
