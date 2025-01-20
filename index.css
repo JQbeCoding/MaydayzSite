@@ -73,7 +73,6 @@ h2{
 }
 .Pride{
     position: absolute;
-    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: red;
@@ -96,6 +95,7 @@ h2{
 }
 
 .button{border-radius: 12px;}
+.Pride{border-radius: 12px;}
 
 @keyframes OrderMove {
     0% { border-bottom-right-radius: 10px;} 
