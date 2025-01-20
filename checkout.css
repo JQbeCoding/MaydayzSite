@@ -1,0 +1,51 @@
+@font-face {
+    font-family: FontA ;
+    src: url(FIRES\ PERSONAL\ USE.ttf);
+}
+
+@font-face {
+    font-family: FontB ;
+    src: url(Ricebox\ Allcaps.ttf);
+}
+
+body{
+    background: url(OrderBackground.png);
+
+}
+h1{
+    font-family: FontA;
+    color: red;
+    text-align: center;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: white;
+}
+.image{
+    margin: auto;
+    display:block;
+    background-color: red;
+    align-items: center;
+    height:300px;
+    width:300px;
+    border-radius: 10%;
+
+}
+p{
+    font-family: FontB;
+    color:white;
+    text-align: center;
+}
+.drinks{
+    font-family: FontB;
+    color:white;
+    text-align: center;
+}
+.meats{
+    font-family: FontB;
+    color: white;
+    text-align: center;
+}
+.sidez{
+    font-family: FontB;
+    color:white;
+    text-align: center;
+}
