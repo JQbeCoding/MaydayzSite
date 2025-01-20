@@ -39,5 +39,5 @@ function openChickenPayment(){
 }
 
 function paymentTest(){
-   onclick(window.open("https://square.link/u/hUcNW2a0", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
+   onclick(window.open("Dasampler.html", "Pork Chop Plate", "width=700,height=700,top=150,left=375"))
 }
