@@ -34,6 +34,10 @@ function openPulledChickenPayment(){
    onclick(window.open("https://square.link/u/D2zoTAFF", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
 }
 
+function openChickenPayment(){
+   onclick(window.open("https://square.link/u/FutoPIdm", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
+}
+
 function paymentTest(){
    onclick(window.open("https://square.link/u/hUcNW2a0", "Pork Chop Plate", "width=500,height=500,top=150,left=375"))
 }

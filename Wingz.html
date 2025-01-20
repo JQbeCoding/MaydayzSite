@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "Stylesheet" href = "checkout.css">
+        <title>Smoked Out Porkchop Plate</title>
+        <link rel = "icon" type = "x-icon" href="Maydayz.png">
+    </head>
+    <body>
+        <h1>Wing Plate</h1>
+
+        <p id = "Description">
+            The Wing Plate from MayDayz Smokn Bar-Be-Cue offers a mouthwatering selection 
+            of perfectly smoked and seasoned chicken wings. These wings are tender on the inside 
+            with a flavorful, crispy exterior. Paired with classic sides like creamy mac n cheese 
+            it's a crowd-pleasing favorite for any barbecue lover.
+        </p>
+        <img class = "image"  width = "300px" height = "300px">
+        <h2 id = "price">$22.00</h2>
+        <p>Choose your drink:</p>
+        <ul class="drinks">
+            <li><input type="radio" name="drink" value="Sweet Tea"> Sweet Tea</li>
+            <li><input type="radio" name="drink" value="Lemonade"> Lemonade</li>
+        </ul>
+        <p>Choose 2 sidez:</p>
+        <ul class="sidez">
+            <li><input type="checkbox" name="side" value="Mac N Cheeze"> Mac N Cheeze</li>
+            <li><input type="checkbox" name="side" value="Beanz"> Beanz</li>
+            <li><input type="checkbox" name="side" value="Potato Salad"> Potato Salad</li>
+        </ul>
+        <button onclick="checkoutPlate()">Place Order</button>
+    </body>
+    <script
+        src = "checkout.js">
+    </script>
+</html>

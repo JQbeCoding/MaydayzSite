@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "Stylesheet" href = "checkout.css">
+        <title>Smoked Out Porkchop Plate</title>
+        <link rel = "icon" type = "x-icon" href="Maydayz.png">
+    </head>
+    <body>
+        <h1>Pulled Pork Plate</h1>
+
+        <p id = "Description">
+            Load pulled pork
+        </p>
+        <img class = "image"  width = "300px" height = "300px">
+        <h2 id = "price">$22.00</h2>
+        <p>Choose your drink:</p>
+        <ul class="drinks">
+            <li><input type="radio" name="drink" value="Sweet Tea"> Sweet Tea</li>
+            <li><input type="radio" name="drink" value="Lemonade"> Lemonade</li>
+        </ul>
+        <p>Choose 2 sidez:</p>
+        <ul class="sidez">
+            <li><input type="checkbox" name="side" value="Mac N Cheeze"> Mac N Cheeze</li>
+            <li><input type="checkbox" name="side" value="Beanz"> Beanz</li>
+            <li><input type="checkbox" name="side" value="Potato Salad"> Potato Salad</li>
+        </ul>
+        <button onclick="checkoutPlate()">Place Order</button>
+    </body>
+    <script
+        src = "checkout.js">
+    </script>
+</html>
