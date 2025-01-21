@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="checkout.css">
-        <title>Checkout Page</title>
-        <link rel="icon" type="x-icon" href="Maydayz.png">
-    </head>
-    <body>
-        <h1>
-            Checkout
-        </h1>
-        <div id="order-summary"></div>
+  <head>
+    <link rel="stylesheet" href="checkout.css" />
+    <title>Checkout Page</title>
+    <link rel="icon" type="x-icon" href="Maydayz.png" />
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <div id="order-summary"></div>
 
-        <script src="checkout.js"></script>
-        <script>
-            const orderSummary = localStorage.getItem("orderSummary");
-            if (orderSummary) {
-                document.getElementById("order-summary").innerHTML = orderSummary;
-            } else {
-                document.getElementById("order-summary").innerHTML = "<p>No order summary found.</p>";
-            }
-        </script>
-    </body>
+    <script src="checkout.js"></script>
+    <script>
+      const orderSummary = localStorage.getItem("orderSummary");
+      if (orderSummary) {
+        document.getElementById("order-summary").innerHTML = orderSummary;
+      } else {
+        document.getElementById("order-summary").innerHTML =
+          "<p>No order summary found.</p>";
+      }
+    </script>
+  </body>
 </html>

@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="checkout.css">
-        <title>Smoked Out Porkchop Plate</title>
-        <link rel="icon" type="x-icon" href="Maydayz.png">
-    </head>
-    <body>
-        <h1>Da Sampler</h1>
+  <head>
+    <link rel="stylesheet" href="checkout.css" />
+    <title>Smoked Out Porkchop Plate</title>
+    <link rel="icon" type="x-icon" href="Maydayz.png" />
+  </head>
+  <body>
+    <h1>Da Sampler</h1>
 
-        <p id="Description">
-            Indulge in a delectable sampler featuring three mouthwatering meats, two delicious sides, 
-            and a refreshing drink. This tantalizing combination is perfect for satisfying your cravings 
-            and experiencing a burst of flavors in every bite. Order your sampler now and treat yourself
-            to a culinary delight!
-        </p>
-        <img class="image" src="Resized_Resized_20240629_131046.jpeg" width="300px" height="300px">
-        <h2 id="price">$32.00</h2>
-        
-        <p>Choose your drink:</p>
-        <ul class="drinks">
-            <li><input type="radio" name="drink" value="Sweet Tea"> Sweet Tea</li>
-            <li><input type="radio" name="drink" value="Lemonade"> Lemonade</li>
-        </ul>
-        
-        <p>Choose 3 meatz:</p>
-        <ul class="sidez">
-            <li><input type="checkbox" name="meat" value="Ribz"> Ribz</li>
-            <li><input type="checkbox" name="meat" value="Pulled Pork"> Pulled Pork</li>
-            <li><input type="checkbox" name="meat" value="Pulled Chicken"> Pulled Chicken</li>
-            <li><input type="checkbox" name="meat" value="Porkchop"> Pork Chop</li>
-            <li><input type="checkbox" name="meat" value="Wingz"> Wingz</li>
-        </ul>
-        
-        <p>Choose 2 sidez:</p>
-        <ul class="sidez">
-            <li><input type="checkbox" name="side" value="Mac N Cheeze"> Mac N Cheeze</li>
-            <li><input type="checkbox" name="side" value="Beanz"> Beanz</li>
-            <li><input type="checkbox" name="side" value="Potato Salad"> Potato Salad</li>
-        </ul>
+    <p id="Description">
+      Indulge in a delectable sampler featuring three mouthwatering meats, two
+      delicious sides, and a refreshing drink. This tantalizing combination is
+      perfect for satisfying your cravings and experiencing a burst of flavors
+      in every bite. Order your sampler now and treat yourself to a culinary
+      delight!
+    </p>
+    <img
+      class="image"
+      src="Resized_Resized_20240629_131046.jpeg"
+      width="300px"
+      height="300px"
+    />
+    <h2 id="price">$32.00</h2>
 
-        <button onclick="checkoutSampler()">Place Order</button>
+    <p>Choose your drink:</p>
+    <ul class="drinks">
+      <li><input type="radio" name="drink" value="Sweet Tea" /> Sweet Tea</li>
+      <li><input type="radio" name="drink" value="Lemonade" /> Lemonade</li>
+    </ul>
 
-        
-    </body>
-    <script src="checkout.js"></script>
+    <p>Choose 3 meatz:</p>
+    <ul class="sidez">
+      <li><input type="checkbox" name="meat" value="Ribz" /> Ribz</li>
+      <li>
+        <input type="checkbox" name="meat" value="Pulled Pork" /> Pulled Pork
+      </li>
+      <li>
+        <input type="checkbox" name="meat" value="Pulled Chicken" /> Pulled
+        Chicken
+      </li>
+      <li><input type="checkbox" name="meat" value="Porkchop" /> Pork Chop</li>
+      <li><input type="checkbox" name="meat" value="Wingz" /> Wingz</li>
+    </ul>
+
+    <p>Choose 2 sidez:</p>
+    <ul class="sidez">
+      <li>
+        <input type="checkbox" name="side" value="Mac N Cheeze" /> Mac N Cheeze
+      </li>
+      <li><input type="checkbox" name="side" value="Beanz" /> Beanz</li>
+      <li>
+        <input type="checkbox" name="side" value="Potato Salad" /> Potato Salad
+      </li>
+    </ul>
+
+    <button onclick="checkoutSampler()">Place Order</button>
+  </body>
+  <script src="checkout.js"></script>
 </html>
