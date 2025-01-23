@@ -68,8 +68,8 @@ h2{
     font-size: 15px;
     cursor: pointer;
     border-radius: 12px;
-    animation-name: OrderMove;
-    animation: OrderMove 4s infinite;
+    /*animation-name: OrderMove;
+    animation: OrderMove 4s infinite;*/
 }
 .Pride{
     position: absolute;
