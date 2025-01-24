@@ -28,7 +28,7 @@ h2{
     text-align: center;
     font-size: 40px;
     font-family: FontB;
-    color: red;
+    color: gold;
 }
 #Platez{
     display:flex;
@@ -45,9 +45,19 @@ h2{
     font-size: 35px;
     color: red;
     padding: auto;
-    background-color: black;
     display: flex;
     justify-content: space-around;
+    text-decoration: none;
+}
+a:link{
+    font-family: FontB;
+    font-size: 35px;
+    color: red; 
+    text-decoration: none;
+}
+a:visited{
+    color: red; 
+    text-decoration: none;
 }
 #Dessertz{
     display: flex;
@@ -158,6 +168,12 @@ footer{
     font-family: FontA;
     background-color: red;
     color: white;
+}
+.back:visited{
+    color: white;
+    font-family: FontA;
+    background-color: red;
+    padding: 10px 10px;
 }
 
 
