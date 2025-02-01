@@ -20,9 +20,9 @@ h1{
     font-family: FontA;
     text-align: center;
     font-size: 40px;
-    color: red;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: white;
+    color: gold;
+    -webkit-text-stroke-width: .5px ;
+    -webkit-text-stroke-color:red;
 }
 h2{
     text-align: center;
@@ -40,7 +40,7 @@ h2{
     justify-content: space-around;
     padding: 120px;
 }
-#Tabs{
+.Tabs{
     font-family: FontB;
     font-size: 35px;
     color: red;
@@ -49,6 +49,12 @@ h2{
     justify-content: space-around;
     text-decoration: none;
 }
+#tab:hover{
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 a:link{
     font-family: FontB;
     font-size: 35px;
@@ -74,7 +80,6 @@ footer{
 
 }
 #Footer {
-    background-color: #000; 
     padding: 10px;   
     margin: 23px, 5px;
     width: auto;
@@ -83,7 +88,6 @@ footer{
 }
 
 .Items{
-    padding:30px;
     margin: 4px 2px;
     background-color: red;
     color: black;
@@ -93,11 +97,13 @@ footer{
     width:250px;
     font-size: 35px;
     font-family: FontB;
-    padding: 40px;
+    padding: 30px;
     cursor: pointer;
     border-radius: 12px;
     animation-name: OrderMove;
-    animation: OrderMove 4s infinite;
+}
+.Items:hover{
+    background-color: gold;
 }
 
 @keyframes OrderMove {
