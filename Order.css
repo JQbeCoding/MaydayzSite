@@ -20,9 +20,9 @@ h1{
     font-family: FontA;
     text-align: center;
     font-size: 40px;
-    color: gold;
+    color: red;
     -webkit-text-stroke-width: .5px ;
-    -webkit-text-stroke-color:red;
+    -webkit-text-stroke-color:gold;
 }
 h2{
     text-align: center;

@@ -40,19 +40,18 @@ h1{
 }
 
 #Footer{
-    background-color: #000; 
     padding: 15px;   
     margin: 23px, 5px;
     width: auto;
-    margin-bottom: 10;
-    transform: translate(0%, 100%);
+    margin-top: 100x;
+    
 }
 
 footer{
     font-family:'Courier New', Courier, monospace;
     color: white;
     text-align: right;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 10px;
     translate: (0%,500%);
 }

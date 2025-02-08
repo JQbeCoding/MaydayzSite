@@ -1,13 +1,14 @@
-
+@font-face {
+    font-family: FontC;
+    src: url(LTSuperior-SemiBold.otf);
+}
 body{
-    background: black url("Background.png");
+    background: black url("Home-Background.png");
     background-size: cover;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default body margin */
+   
 
     
 }
@@ -36,11 +37,7 @@ body{
     }
 }
 
-#Titlepage{
-    position: absolute;
-    left: 30%;
-    top: 55%;
-}
+
 
 @font-face {
     font-family: FontA;
@@ -134,6 +131,7 @@ h2{
 .button2{
     background-color: red;
     text-align: center;
+    border-radius: 10%;
     border: none;
     color: white;
     font-family: FontB;
@@ -162,14 +160,13 @@ h2{
     color:red;
 }
 footer{
-    opacity: 0;
-    animation: appear 3s 1s forwards;
-font-family:'Courier New', Courier, monospace;
-color: white;
+opacity: 0;
+animation: appear 3s 1s forwards;
+font-family: FontC;
+padding-top: 20px;
 text-align: center;
-margin-bottom: 0;
+color: white;
 font-size: 10px;
-transform: translate(0%,100%);
 }
 
 .IG{
