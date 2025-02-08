@@ -21,7 +21,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: logo-fit 3s forwards;
+    animation: logo-fit 2s forwards;
 }
 @keyframes logo-fit {
     0% {
@@ -52,7 +52,7 @@ body{
 }
 h1{
     opacity: 0;
-    animation: appear 3s 1s forwards;
+    animation: appear 2s 1s forwards;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
     font-size: 50px;
@@ -63,7 +63,7 @@ h1{
 }
 h2{
     opacity: 0;
-    animation: appear 3s 2s forwards;
+    animation: appear 2s 2s forwards;
     font-family: FontB;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: rgb(251, 0, 0);
@@ -76,7 +76,7 @@ h2{
     margin: 50px;
     text-align: center;
     opacity: 0;
-    animation: appear 3s 1s forwards;
+    animation: appear 2s 1s forwards;
 }
 @keyframes appear {
     0% {
@@ -89,7 +89,7 @@ h2{
 }
 #Smalltabs{
     opacity: 0;
-    animation: appear 3s 1s forwards;
+    animation: appear 2s 1s forwards;
     font-family: FontB;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
@@ -98,7 +98,7 @@ h2{
 }
 #Order{
     opacity: 0;
-    animation: appear 3s 1s forwards;
+    animation: appear 2s 1s forwards;
     padding: 10px;
     margin: 10px;
 }
