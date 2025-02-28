@@ -1,15 +1,15 @@
 
 @font-face {
     font-family: FontB;
-    src: url("Ricebox\ Allcaps.ttf");
+    src: url("Fonts/Ricebox\ Allcaps.ttf");
 }
 @font-face {
     font-family: FontA;
-    src: url("FIRES\ PERSONAL\ USE.ttf");
+    src: url("Fonts/FIRES\ PERSONAL\ USE.ttf");
 }
 @font-face{
     font-family: FontC;
-    src: url("Pridi-Bold.ttf")
+    src: url("Fonts/Pridi-Bold.ttf")
 }
 @font-face {
     font-family: FontD;
