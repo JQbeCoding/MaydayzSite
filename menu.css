@@ -1,5 +1,5 @@
 body{
-    background: url(MenuBackground.png);
+    background: url(Images/MenuBackground.png);
     background-size: cover;
 }
 
@@ -22,6 +22,10 @@ body{
 @font-face {
     font-family: FontB;
     src: url("Ricebox\ Allcaps.ttf");
+}
+@font-face {
+    font-family: FontC;
+    src: url(LTSuperior-SemiBold.otf);
 }
 
 h1{
@@ -48,7 +52,7 @@ h1{
 }
 
 footer{
-    font-family:'Courier New', Courier, monospace;
+    font-family:FontC;
     color: white;
     text-align: right;
     margin-bottom: 10px;

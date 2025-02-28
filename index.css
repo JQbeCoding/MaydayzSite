@@ -3,7 +3,7 @@
     src: url(LTSuperior-SemiBold.otf);
 }
 body{
-    background: black url("Home-Background.png");
+    background: black url("Images/Home-Background.png");
     background-size: cover;
     opacity: 1;
     transition: opacity 1s ease-out;
@@ -18,7 +18,7 @@ body{
     cursor: pointer;
     display: block; 
     margin: 0 auto; 
-    background-image: url("Maydayz.png");
+    background-image: url("Images/Maydayz.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,12 +28,12 @@ body{
     0% {
         height: 100px;
         width: 100px;
-        background-image: url("Maydayz.png");
+        background-image: url("Images/Maydayz.png");
     }
     100% {
         height: 300px;
         width: 300px;
-        background-image: url("Maydayz.png");
+        background-image: url("Images/Maydayz.png");
     }
 }
 

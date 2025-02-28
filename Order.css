@@ -11,9 +11,13 @@
     font-family: FontC;
     src: url("Pridi-Bold.ttf")
 }
+@font-face {
+    font-family: FontD;
+    src: url(LTSuperior-SemiBold.otf);
+}
 
 body{
-    background: url("OrderBackground.png");
+    background: url("Images/OrderBackground.png");
     background-size: auto;
 }
 h1{
@@ -71,7 +75,7 @@ a:visited{
     padding: 120px;
 }
 footer{
-    font-family:'Courier New', Courier, monospace;
+    font-family:FontD;
     color: white;
     text-align: right;
     margin-bottom: 0px;
