@@ -13,7 +13,7 @@
 }
 @font-face {
     font-family: FontD;
-    src: url(LTSuperior-SemiBold.otf);
+    src: url(Fonts/LTSuperior-SemiBold.otf);
 }
 
 body{
@@ -80,15 +80,14 @@ footer{
     text-align: right;
     margin-bottom: 0px;
     font-size: 10px;
-    translate: (0%,500%);
+    margin: auto;
 
 }
 #Footer {
     padding: 10px;   
     margin: 23px, 5px;
     width: auto;
-    margin-bottom: 0;
-    transform: translate(0%, 100%);
+    margin:auto;
 }
 
 .Items{
