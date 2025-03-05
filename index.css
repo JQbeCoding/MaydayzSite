@@ -3,8 +3,8 @@
     src: url(Fonts/LTSuperior-SemiBold.otf);
 }
 body{
-    background: black url("Images/Home-Background.png");
-    background-size: cover;
+    background: url("Images/MenuBackground.png");
+    background-size: auto;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
@@ -17,7 +17,7 @@ body{
     height: 300px;
     cursor: pointer;
     display: block; 
-    margin: 0 auto; 
+    margin: -50px auto; 
     background-image: url("Images/Maydayz.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -31,8 +31,8 @@ body{
         background-image: url("Images/Maydayz.png");
     }
     100% {
-        height: 300px;
-        width: 300px;
+        height: 400px;
+        width: 400px;
         background-image: url("Images/Maydayz.png");
     }
 }
@@ -52,11 +52,11 @@ h1{
     animation: appear 2s 1s forwards;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
-    font-size: 50px;
+    font-size: 8vh;
      text-align:center ;
      font-family: FontA ;
      color:red;
-     transform: translateY(-100%);
+
 }
 h2{
     opacity: 0;
@@ -65,9 +65,9 @@ h2{
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: rgb(251, 0, 0);
     text-align:center ;
-    font-size: 30px;
+    font-size: 5vh;
     color:white;
-    transform: translateY(-200%);
+    padding-bottom: 40px;
 }
 #tabs {
     margin: 50px;
@@ -90,7 +90,7 @@ h2{
     font-family: FontB;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
-    font-size: 25px;
+    font-size: 4vh;
     color: black;
 }
 #Order{
@@ -108,7 +108,7 @@ h2{
     color: white;
     font-family: FontB;
     padding: 25px 25px;
-    font-size: 15px;
+    font-size: 2.2vh;
     cursor: pointer;
     border-radius: 12px;
     animation-name: OrderMove;
@@ -122,7 +122,7 @@ h2{
     border: none;
     color: white;
     font-family: FontB;
-    padding: 25px 25px;
+    padding: 25% 25%;
     font-size: 15px;
     cursor: pointer;
     animation-name:Pride;
@@ -163,7 +163,7 @@ footer{
 opacity: 0;
 animation: appear 3s 1s forwards;
 font-family: FontC;
-padding-top: 20px;
+padding-top: 50px;
 text-align: center;
 color: white;
 font-size: 10px;

@@ -1,6 +1,6 @@
 body{
     background: url(Images/MenuBackground.png);
-    background-size: cover;
+    background-size: auto;
 }
 
 #Menu{

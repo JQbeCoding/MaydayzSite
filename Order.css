@@ -17,20 +17,20 @@
 }
 
 body{
-    background: url("Images/OrderBackground.png");
+    background: url("Images/MenuBackground.png");
     background-size: cover;
 }
 h1{
     font-family: FontA;
     text-align: center;
-    font-size: 40px;
+    font-size: 8vh;
     color: red;
     -webkit-text-stroke-width: .5px ;
     -webkit-text-stroke-color:gold;
 }
 h2{
     text-align: center;
-    font-size: 40px;
+    font-size: 5vh;
     font-family: FontB;
     color: gold;
 }
@@ -46,7 +46,7 @@ h2{
 }
 .Tabs{
     font-family: FontB;
-    font-size: 35px;
+    font-size: 5vh;
     color: red;
     padding: auto;
     display: flex;
@@ -61,7 +61,7 @@ h2{
 
 a:link{
     font-family: FontB;
-    font-size: 35px;
+    font-size: 4vh;
     color: red; 
     text-decoration: none;
 }
@@ -78,33 +78,36 @@ footer{
     font-family:FontD;
     color: white;
     text-align: right;
-    margin-bottom: 0px;
-    font-size: 10px;
-    margin: auto;
+    font-size: 1.2vh;
+    margin-top: 100px;
 
 }
 #Footer {
     padding: 10px;   
     margin: 23px, 5px;
     width: auto;
-    margin:auto;
+}
+
+#Items{
+    display: flex;
+    justify-content: space-around;
 }
 
 .Items{
-    margin: 4px 2px;
+    padding:30px;
+    margin: 100px 2px;
     background-color: red;
-    color: black;
     text-align: center;
     align-items: center;
     height:280px;
     width:250px;
     font-size: 35px;
     font-family: FontB;
-    padding: 30px;
+    padding: 40px;
     cursor: pointer;
     border-radius: 12px;
-    animation-name: OrderMove;
 }
+
 .Items:hover{
     background-color: gold;
 }
@@ -177,12 +180,14 @@ footer{
     font-family: FontA;
     background-color: red;
     color: white;
+    margin-bottom: 10px 20px 100px ;
 }
 .back:visited{
     color: white;
     font-family: FontA;
     background-color: red;
     padding: 10px 10px;
+    margin: 10px -200px 10px;
 }
 
 
