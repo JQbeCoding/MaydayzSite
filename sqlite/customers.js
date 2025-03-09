@@ -2,7 +2,7 @@ import Database from "better-sqlite3";
 const db = new Database("customers.db");
 
 const query = `
-CREATE TABLE IF NOT EXISTS customers (
+CREATE TABLE customers (
    id  INTEGER PRIMARY KEY, 
    name TEXT NOT NULL,
    phoneNumber INTEGER NOT NULL UNIQUE,
@@ -21,6 +21,18 @@ const data = [
   },
 ];
 
+const existingData = db
+  .prepare("SELECT name, phoneNumber, email FROM customers")
+  .all();
+
+existingData.forEach((customer) => {
+  data.push({
+    name: customer.name,
+    phoneNumber: customer.phoneNumber,
+    email: customer.email,
+  });
+});
+
 const insertData = db.prepare(
   "INSERT INTO customers(name, phoneNumber, email) VALUES(?, ?, ?)"
 );
@@ -28,5 +40,8 @@ const insertData = db.prepare(
 data.forEach((customer) => {
   insertData.run(customer.name, customer.phoneNumber, customer.email);
 });
+
+const customers = db.prepare("SELECT * FROM customers").all();
+console.log(customers);
 
 db.close();

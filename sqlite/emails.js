@@ -5,7 +5,6 @@ import nodemailer from "nodemailer";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 
-// Async function to send an email
 async function sendEmail() {
   // Open the SQLite database
   const db = await open({
@@ -14,37 +13,40 @@ async function sendEmail() {
   });
 
   try {
-    // Retrieve the first customer's email
-    const row = await db.get("SELECT email FROM customers LIMIT 1");
+    // Retrieve all customer emails
+    const rows = await db.all("SELECT email FROM customers");
 
-    if (!row) {
+    if (rows.length === 0) {
       console.error("No customers found in the database.");
       return;
     }
 
-    let recipientEmail = row.email;
-    console.log("Sending email to:", recipientEmail);
+    // Loop through the rows to send email to each customer
+    for (let row of rows) {
+      let recipientEmail = row.email;
+      console.log("Sending email to:", recipientEmail);
 
-    // Create the email transporter
-    let transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+      // Create the email transporter
+      let transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
+        },
+      });
 
-    // Email options
-    let mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: recipientEmail, // Retrieved from database
-      subject: "WE SMOKED OUT",
-      text: "HEY MAMA BEN!!",
-    };
+      // Email options
+      let mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: recipientEmail, // Retrieved from database
+        subject: "WE SMOKED OUT",
+        html: "<h1>We’ve got some delicious BBQ ready for you!</h1>", // Add HTML content here
+      };
 
-    // Send the email
-    let info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.response);
+      // Send the email
+      let info = await transporter.sendMail(mailOptions);
+      console.log("Email sent:", info.response);
+    }
   } catch (error) {
     console.error("Error:", error);
   } finally {
