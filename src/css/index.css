@@ -1,9 +1,9 @@
 @font-face {
     font-family: FontC;
-    src: url(Fonts/LTSuperior-SemiBold.otf);
+    src: url(assets/Fonts/LTSuperior-SemiBold.otf);
 }
 body{
-    background: url("Images/MenuBackground.png");
+    background: url("assets/Images/MenuBackground.png");
     background-size: auto;
     opacity: 1;
     transition: opacity 1s ease-out;
@@ -18,7 +18,7 @@ body{
     cursor: pointer;
     display: block; 
     margin: -50px auto; 
-    background-image: url("Images/Maydayz.png");
+    background-image: url("assets/Images/Maydayz.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,12 +28,12 @@ body{
     0% {
         height: 100px;
         width: 100px;
-        background-image: url("Images/Maydayz.png");
+        background-image: url("assets/Images/Maydayz.png");
     }
     100% {
         height: 400px;
         width: 400px;
-        background-image: url("Images/Maydayz.png");
+        background-image: url("assets/Images/Maydayz.png");
     }
 }
 
@@ -41,11 +41,11 @@ body{
 
 @font-face {
     font-family: FontA;
-    src: url("Fonts/FIRES\ PERSONAL\ USE.ttf");
+    src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
 }
 @font-face {
     font-family: FontB;
-    src: url("Fonts/Ricebox\ Allcaps.ttf");
+    src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
 }
 h1{
     opacity: 0;
