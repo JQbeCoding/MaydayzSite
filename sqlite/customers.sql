@@ -47,8 +47,8 @@ WHERE id = 3;
 ('Patrick', '+17049016859'),
 ('Bryan', '+19804155465');*/
 
-INSERT INTO customers (name, phoneNumber) 
-VALUES ('Taylor', '+17049495173');
+/*INSERT INTO customers (name, phoneNumber) 
+VALUES ('Taylor', '+17049495173');*/
 
 /*(UPDATE customers 
 SET phoneNumber ='7042812121'
