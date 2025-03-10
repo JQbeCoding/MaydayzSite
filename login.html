@@ -7,12 +7,19 @@
       type="x-icon"
       href="Images/maydayz__64_x_64_px___logo__lLA_icon.ico"
     />
-    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="login.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <img height="200px" width="200px" src="Images/Maydayz (64 x 64 px) (Logo).png" />
+    <div id="Smalltabs">
+      <a href="./Index.html"
+        ><img
+          src="Images/Maydayz.png"
+          width="200px"
+          height="200px"
+          alt="Maydayz Logo"
+      /></a>
     <div class="signup-container">
       <form id="signupForm">
         <label for="name">Name:</label>
@@ -27,13 +34,16 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+    <p id="transparency">INFORMATION GIVEN TO MAYDAYZ IS FOR <strong>EXCLUSIVELY</strong> PROMOTIONAL USE ONLY!!! <br> MAYDAYZ WILL NEVER
+    ASK FOR PERSONAL INFORMATION. SIGNING UP CONFIRMS YOU WILL ACCEPT TEXT AND MAIL FROM MAYDAYZ. <br>FOR ANY QUESTIONS CALL
+  980-499-8399. WE SMOKED OUT!!!</p>
 
     <div id="Footer">
       <footer>
         <p>
           <img
             class="IG"
-            src="IG.png"
+            src="Images/IG.png"
             height="10px"
             width="10px"
             onclick="window.open('https://www.instagram.com/maydayz_bbq/')"
@@ -47,39 +57,38 @@
     <script>
   const signupForm = document.getElementById('signupForm');
 
-signupForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+  signupForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  const formData = new FormData(signupForm);
-  const formDataObject = Object.fromEntries(formData);
+    const formData = new FormData(signupForm);
+    const formDataObject = Object.fromEntries(formData);
 
-  // Add +1 if missing
-  if (!formDataObject.phoneNumber.startsWith('+1')) {
-    formDataObject.phoneNumber = '+1' + formDataObject.phoneNumber;
-  }
-
-  try {
-    const response = await fetch('/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formDataObject),
-    });
-
-    if (response.ok) {
-      alert('Signup successful!');
-      window.location.reload();
-      signupForm.reset();
-    } else {
-      const errorMessage = await response.text();
-      alert(`Signup failed: ${errorMessage}`);
+    // Add +1 if missing
+    if (!formDataObject.phoneNumber.startsWith('+1')) {
+      formDataObject.phoneNumber = '+1' + formDataObject.phoneNumber;
     }
-  } catch (error) {
-    console.error('Error during signup:', error);
-    alert('An error occurred during signup.');
-  }
-});
+
+    try {
+      const response = await fetch('/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataObject),
+      });
+
+      if (response.ok) {
+        alert('Signup successful!');
+        window.location.href = '/index.html'; 
+      } else {
+        const errorMessage = await response.text();
+        alert(`Signup failed: ${errorMessage}`);
+      }
+    } catch (error) {
+      console.error('Error during signup:', error);
+      alert('An error occurred during signup.');
+    }
+  });
     </script>
   </body>
 </html>

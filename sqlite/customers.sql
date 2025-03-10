@@ -68,6 +68,6 @@ UPDATE customers
 SET phoneNumber ='+19808993029'
 WHERE id = 7;
 
-DELETE FROM customers WHERE id BETWEEN 32 AND 35;
+DELETE FROM customers WHERE id BETWEEN 32 AND 38;
 
 SELECT * FROM customers;
