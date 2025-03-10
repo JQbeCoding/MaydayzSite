@@ -137,6 +137,10 @@ h2{
     font-family: FontB;
     padding:10px;
 }
+#SignIn{
+    margin-left: 75%;
+
+}
 
 .button{border-radius: 12px;}
 .Pride{border-radius: 12px;}

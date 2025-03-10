@@ -1,3 +1,3 @@
 function menuPop(){
-    onclick(window.open("MAYDAYZ Menu Dec 14-15.png"));
+    onclick(window.open("/Images/MAYDAYZ Menu Dec 14-15-3.png"));
 }
