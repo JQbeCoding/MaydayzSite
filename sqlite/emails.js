@@ -25,7 +25,6 @@ async function sendEmail() {
       let recipientEmail = row.email;
       console.log("Sending email to:", recipientEmail);
 
-      // Create the email transporter
       let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -37,7 +36,7 @@ async function sendEmail() {
       // Email options
       let mailOptions = {
         from: process.env.EMAIL_USER,
-        to: recipientEmail, // Retrieved from database
+        to: recipientEmail, 
         subject: "WE SMOKED OUT",
         html: "<h1>We’ve got some delicious BBQ ready for you!</h1>", // Add HTML content here
       };

@@ -26,6 +26,9 @@ app.post('/signup', (req, res) => {
       'INSERT INTO customers (name, phoneNumber, email) VALUES (?, ?, ?)'
     );
     insertStmt.run(name, phoneNumber, email);
+    console.log('Name: ', name);
+    console.log('Number: ', phoneNumber);
+    console.log('Email', email);
 
     res.send('Signup successful!');
   } catch (error) {
@@ -39,9 +42,9 @@ app.post('/signup', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  const __filename = fileURLToPath(import.meta.url); //get the current file path
-  const __dirname = path.dirname(__filename); //get the current directory path
-  res.sendFile(path.join(__dirname, '..', 'login.html')); // Serve login.html
+  const __filename = fileURLToPath(import.meta.url); 
+  const __dirname = path.dirname(__filename); 
+  res.sendFile(path.join(__dirname, '..', 'login.html')); 
 });
 
 app.listen(port, () => {
