@@ -1,8 +1,8 @@
 const twilio = require("twilio");
 const Database = require("better-sqlite3");
 
-const sid = "AC387cfe109490ef8434a50bee7f2936a2";
-const atoken = "e06090a4fa0a03bdba0ebac29991a963";
+const sid = XXX;
+const atoken = XXX;
 const number = +19804998399;
 
 const client = twilio(sid, atoken);
