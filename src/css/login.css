@@ -1,38 +1,38 @@
 @font-face {
     font-family: FontB;
-    src: url("Fonts/Ricebox\ Allcaps.ttf");
+    src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
 }
 @font-face {
     font-family: FontA;
-    src: url("Fonts/FIRES\ PERSONAL\ USE.ttf");
+    src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
 }
 @font-face{
     font-family: FontC;
-    src: url("Fonts/Pridi-Bold.ttf")
+    src: url("assets/Fonts/Pridi-Bold.ttf")
 }
 @font-face {
     font-family: FontD;
-    src: url(Fonts/LTSuperior-SemiBold.otf);
+    src: url(assets/Fonts/LTSuperior-SemiBold.otf);
 }
 
 body {
-    background: url("Images/MenuBackground.png");
+    background: url("assets/Images/MenuBackground.png");
     background-size: cover;
-    font-family: FontD; /* Default font */
-    color: white; /* Default text color */
+    font-family: FontD;
+    color: white; 
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body covers the viewport */
+    min-height: 100vh; 
 }
 
 .signup-container {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
-    margin: 50px auto; /* Center the container */
+    margin: 50px auto; 
 }
 
 .signup-container h1 {
@@ -54,7 +54,7 @@ body {
 .signup-container input[type="text"],
 .signup-container input[type="email"],
 .signup-container input[type="tel"] {
-    width: calc(100% - 22px); /* Adjust for padding and border */
+    width: calc(100% - 22px); 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

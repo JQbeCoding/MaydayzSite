@@ -1,5 +1,5 @@
 body{
-    background: url(Images/MenuBackground.png);
+    background: url(assets/Images/MenuBackground.png);
     background-size: auto;
 }
 
@@ -17,15 +17,15 @@ body{
 
 @font-face {
     font-family: FontA;
-    src: url("Fonts/FIRES\ PERSONAL\ USE.ttf");
+    src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
 }
 @font-face {
     font-family: FontB;
-    src: url("Fonts/Ricebox\ Allcaps.ttf");
+    src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
 }
 @font-face {
     font-family: FontC;
-    src: url(Fonts/LTSuperior-SemiBold.otf);
+    src: url(assets/Fonts/LTSuperior-SemiBold.otf);
 }
 
 h1{
