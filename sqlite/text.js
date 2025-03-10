@@ -1,7 +1,7 @@
 const twilio = require("twilio");
 const Database = require("better-sqlite3");
 
-const sid = XXx;
+const sid = XXX;
 const atoken = XXX;
 const number = +19804998399;
 
