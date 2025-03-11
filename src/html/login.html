@@ -67,12 +67,14 @@
           const formData = new FormData(signupForm);
           const formDataObject = Object.fromEntries(formData);
 
-          if (!formDataObject.phoneNumber.startsWith('+1')) {
+          // Format the phone number
+          if (formDataObject.phoneNumber && !formDataObject.phoneNumber.startsWith('+1')) {
             formDataObject.phoneNumber = '+1' + formDataObject.phoneNumber;
           }
 
           try {
-            const response = await fetch('/signup', {
+            // Replace with your actual Render backend endpoint
+            const response = await fetch('https://your-app-name.onrender.com/signup', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
