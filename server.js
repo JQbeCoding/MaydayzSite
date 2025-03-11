@@ -31,9 +31,6 @@ const corsOptions = {
   };
   app.use(cors(corsOptions));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Index.html'));
-});
 
 app.get('/signup', (req, res) => {
     res.sendFile(path.join(__dirname, 'Index.html'));
