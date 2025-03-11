@@ -2,24 +2,16 @@
 <html lang="en">
   <head>
     <title>Maydayz - Sign Up</title>
-    <link
-      rel="icon"
-      type="x-icon"
-      href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico" />
     <link rel="stylesheet" href="/src/css/login.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div id="Smalltabs">
-      <a href="/Index.html"
-        ><img
-          src="/src/css/assets/Images/Maydayz.png"
-          width="200px"
-          height="200px"
-          alt="Maydayz Logo"
-      /></a>
+      <a href="/index.html">
+        <img src="/src/css/assets/Images/Maydayz.png" width="200px" height="200px" alt="Maydayz Logo" />
+      </a>
       <div class="signup-container">
         <form id="signupForm">
           <label for="name">Name:</label>
@@ -73,8 +65,7 @@
           }
 
           try {
-
-            const response = await fetch('https://maydayzsite.onrender.com/', {
+            const response = await fetch('https://maydayzsite.onrender.com/signup', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -84,7 +75,7 @@
 
             if (response.ok) {
               alert('Signup successful!');
-              window.location.href = '/index.html';
+              window.location.href = '/index.html'; // Use lowercase 'index.html'
             } else {
               const errorMessage = await response.text();
               alert(`Signup failed: ${errorMessage}`);
