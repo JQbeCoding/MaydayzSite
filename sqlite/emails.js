@@ -63,7 +63,7 @@ async function sendEmail() {
           {
             filename: "MaydayzLogo.png",
             path: path.resolve(
-              "src/css/assets/Images/Maydayz (64 x 64 px) (Logo).png"
+              "/src/css/assets/Images/Maydayz (64 x 64 px) (Logo).png"
             ),
             cid: "maydayzlogo",
           },

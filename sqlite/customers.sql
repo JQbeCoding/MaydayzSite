@@ -1,4 +1,7 @@
 --INSERT INTO customers (name, phoneNumber, email) 
+--VALUES ('JaQuis', 7049675408, 'jaquismay2004@gmail.com');
+
+--INSERT INTO customers (name, phoneNumber, email) 
 --VALUES ('Ed', 7043033300, 'ebmay85@gmail.com');
 
 --INSERT INTO customers (name, phoneNumber, email) 
@@ -68,6 +71,6 @@ UPDATE customers
 SET phoneNumber ='+19808993029'
 WHERE id = 7;
 
---DELETE FROM customers WHERE id BETWEEN 32 AND 38;
+
 
 SELECT * FROM customers;
