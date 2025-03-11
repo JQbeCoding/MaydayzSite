@@ -2,7 +2,7 @@ import Database from "better-sqlite3";
 const db = new Database("customers.db");
 
 const query = `
-CREATE TABLE customers (
+CREATE TABLE IF NOT EXISTS customers (
    id  INTEGER PRIMARY KEY, 
    name TEXT NOT NULL,
    phoneNumber TEXT NOT NULL UNIQUE,
@@ -12,14 +12,6 @@ CREATE TABLE customers (
 `;
 
 db.exec(query);
-
-const data = [
-  {
-    name: "JaQuis May",
-    phoneNumber: "7049675408",
-    email: "jaquismay2004@gmail.com",
-  },
-];
 
 const existingData = db
   .prepare("SELECT name, phoneNumber, email FROM customers")
