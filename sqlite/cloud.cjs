@@ -1,50 +1,112 @@
-const sqlite3 = require("sqlite3").verbose();
+const fetch = require("node-fetch"); // For making API requests
+const apiUrl = "https://cjqnosg2nz.g2.sqlite.cloud/customers.db/sql"; // SQLiteCloud endpoint
+const apiKey = "xMdfW5sibP7SLHy2bvrdFJkjU3gI5iJnmMnqAa0tZUc;"; // Your SQLiteCloud API key
+const databaseName = "customers.db"; // Your SQLiteCloud database name
 
-// Define the setupDatabase function to initialize the database
-function setupDatabase() {
-  const db = new sqlite3.Database("./customers.db", (err) => {
-    if (err) {
-      console.error("Failed to connect to the database:", err.message);
-    } else {
-      console.log("Connected to the SQLite database.");
-    }
+// Create the 'customers' table if it doesn't exist
+const createTableQuery = `
+  CREATE TABLE IF NOT EXISTS customers (
+    id INTEGER PRIMARY KEY, 
+    name TEXT NOT NULL, 
+    phoneNumber TEXT NOT NULL UNIQUE, 
+    email TEXT, 
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+`;
+
+async function createTable() {
+  const url = `${apiUrl}/${databaseName}/sql`;
+  console.log("Request URL:", url); // Debugging: Print the request URL
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ sql: createTableQuery }),
   });
-  return db;
+
+  const data = await response.json();
+  console.log("Create Table Response:", data); // Debugging: Log the response
+  if (data.error) {
+    console.error("Error creating table:", data.error);
+  } else {
+    console.log("Table created or already exists.");
+  }
 }
 
-const db = setupDatabase();
+// Insert customer data into the 'customers' table
+async function insertCustomer(name, phoneNumber, email) {
+  const insertQuery = `
+    INSERT INTO customers(name, phoneNumber, email) 
+    VALUES('${name}', '${phoneNumber}', '${email}')
+  `;
 
-// Example query to fetch data from the database
-db.all("SELECT * FROM customers", (err, rows) => {
-  if (err) {
-    console.error("Error querying database:", err.message);
+  const url = `${apiUrl}/${databaseName}/sql`;
+  console.log("Request URL:", url); // Debugging: Print the request URL
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ sql: insertQuery }),
+  });
+
+  const data = await response.json();
+  console.log("Insert Customer Response:", data); // Debugging: Log the response
+  if (data.error) {
+    console.error("Error inserting data:", data.error);
   } else {
-    console.log("Fetched rows:", rows);
+    console.log("Customer added successfully!");
   }
-});
+}
 
-// Example of inserting data into the database
-const insertQuery = `INSERT INTO customers (name, phoneNumber, email)
-                     VALUES (?, ?, ?)`;
+// Retrieve customer data from the database
+async function getCustomers() {
+  const selectQuery = "SELECT * FROM customers";
 
-// Insert some sample data
-db.run(
-  insertQuery,
-  ["DaQuis May", "17049675407", "Daquismay2004@gmail.com"],
-  function (err) {
-    if (err) {
-      console.error("Error inserting data:", err.message);
-    } else {
-      console.log(`A row has been inserted with rowid ${this.lastID}`);
-    }
-  }
-);
+  const url = `${apiUrl}/${databaseName}/sql`;
+  console.log("Request URL:", url); // Debugging: Print the request URL
 
-// Example of closing the database after operations are complete
-db.close((err) => {
-  if (err) {
-    console.error("Error closing the database:", err.message);
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ sql: selectQuery }),
+  });
+
+  const data = await response.json();
+  console.log("Get Customers Response:", data); // Debugging: Log the response
+  if (data.error) {
+    console.error("Error retrieving data:", data.error);
   } else {
-    console.log("Database connection closed.");
+    console.log("Customers:", data.rows);
   }
-});
+}
+
+// Create the table and insert some customer data
+async function run() {
+  await createTable();
+
+  const customers = [
+    { name: "John Doe", phoneNumber: "1234567890", email: "john@example.com" },
+    {
+      name: "Jane Smith",
+      phoneNumber: "9876543210",
+      email: "jane@example.com",
+    },
+  ];
+
+  for (const customer of customers) {
+    await insertCustomer(customer.name, customer.phoneNumber, customer.email);
+  }
+
+  await getCustomers();
+}
+
+run();
