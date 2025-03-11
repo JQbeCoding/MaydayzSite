@@ -2,7 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Import the cors middleware
+const cors = require('cors');
+const path = require('path');
 
 // Load environment variables from .env
 dotenv.config();
@@ -14,25 +15,27 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const app = express();
-const port = process.env.PORT || 3000; // Use environment PORT or 3000
+const port = 3000; // Use environment PORT or 3000
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'src', 'html')));
+app.use(express.static(path.join(__dirname, 'src', 'html','login.html')));
 
 const corsOptions = {
-  origin: 'https://superb-dango-5693f1.netlify.app/' // Replace with your Netlify domain
+  origin: 'https://superb-dango-5693f1.netlify.app/' 
 };
 app.use(cors(corsOptions));
 
 app.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src', 'html', 'Login.html'));
+  res.sendFile(path.join(__dirname, 'src', 'html', 'login.html'));
+
 });
+console.log('Directory: ' , path.join(__dirname, 'src', 'html', 'login.html'));
 
 // Handle the /signup POST request
 app.post('/signup', async (req, res) => {
   try {
     const { data, error } = await supabase
-      .from('Customers') // Replace 'Customers' with your actual Supabase table name
+      .from('MaydayzCustomers') // Replace 'Customers' with your actual Supabase table name
       .insert([req.body]);
 
     if (error) {
