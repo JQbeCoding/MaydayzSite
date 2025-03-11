@@ -16,14 +16,17 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const app = express();
 const port = process.env.PORT || 3000; // Use environment PORT or 3000
 
-// Middleware to parse JSON request bodies
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'src', 'html')));
 
-// Enable CORS for your Netlify domain
 const corsOptions = {
-  origin: 'https://superb-dango-5693f1.netlify.app/' // Replace with your actual Netlify domain
+  origin: 'https://superb-dango-5693f1.netlify.app/' // Replace with your Netlify domain
 };
 app.use(cors(corsOptions));
+
+app.get('/signup', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src', 'html', 'Login.html'));
+});
 
 // Handle the /signup POST request
 app.post('/signup', async (req, res) => {
