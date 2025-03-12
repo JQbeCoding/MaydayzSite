@@ -84,11 +84,7 @@ h2{
        opacity: 1;
     }
 }
-#Smalltabs{
-    opacity: 0;
-    animation: appear 2s 1s forwards;
-    font-size: 20px;
-}
+
 #Order{
     opacity: 0;
     animation: appear 2s 1s forwards;
@@ -133,9 +129,23 @@ h2{
     font-family: FontB;
     padding:10px;
 }
-#SignIn{
-    margin-left: 62%;
+#Smalltabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: appear 2s 1s forwards;
+    font-size: 20px;
+}
 
+/* Group the logo, menu and about us */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .button{border-radius: 12px;}
