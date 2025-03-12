@@ -1,3 +1,5 @@
+/* Imports for the server hosted on Render backend
+ */
 const express = require('express');
 const dotenv = require('dotenv');
 const { createClient } = require('@supabase/supabase-js');
@@ -5,55 +7,64 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-// Load environment variables from .env
+//Allows for the env
 dotenv.config();
-
+//Reads the env file
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 
 // Create a Supabase client
 const supabase = createClient(supabaseUrl, supabaseKey);
-console.log(process.env.SUPABASE_URL);
-console.log(process.env.SUPABASE_KEY);
 
+
+//Initialize express as app
 const app = express();
-const port = process.env.PORT || 3000; // Use environment PORT or 3000
+//Uses port from express or local
+const port = process.env.PORT || 3000; 
 
+//Parses the local JSON file
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname))); // Serve static files from the project root directory
+app.use(express.static(path.join(__dirname)));
 
+//First instance of cors. Reads from all enviornments
 const corsOptions = {
     origin: [
+    //To be replaced with 'https://www.maydayz.com'
       'https://superb-dango-5693f1.netlify.app',
       'https://maydayzsite.onrender.com',
-      'http://localhost:3000' // Add your local development origin if needed
     ]
   };
   app.use(cors(corsOptions));
 
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Index.html'));
+//Retrieves the Index file
+app.get('/', (request, response) => {
+    response.sendFile(path.join(__dirname, 'Index.html'));
 });
 
-console.log('Directory: ', path.join(__dirname, 'index.html'));
+
+//console.log('Directory: ', path.join(__dirname, 'index.html')); <-- This was for debugging
 
 // Handle the /signup POST request
 app.post('/signup', async (req, res) => {
     try {
+        //Reads from the Supabase Postgre DB
         const { data, error } = await supabase
-            .from('MaydayzCustomers') // Replace 'MaydayzCustomers' with your actual Supabase table name
+            .from('MaydayzCustomers') 
             .insert([req.body]);
             console.log('Customer: ',  data);
 
+        //If it doesn't work it sends an error to the catch
         if (error) {
             console.error('Supabase error during signup:', error);
             return res.status(500).send(error.message);
         }
-
+        //Otherwise we send back to the login the sign up was sucessful
         console.log('Signup successful!', data);
         res.send('Signup successful!');
-    } catch (error) {
+    } 
+    //If an error was responded, we send that message to the Login page so the user can see the feedback
+    catch (error) {
         console.error('Error during signup:', error);
         res.status(500).send('An error occurred during signup.');
     }

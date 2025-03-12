@@ -1,10 +1,9 @@
+//Code to check the database information within the terminal
 import * as dotenv from 'dotenv';
 dotenv.config();
 import { createClient } from '@supabase/supabase-js'
 
-console.log('Supabase key: ', process.env.SUPABASE_KEY);
-//Creating a single superbase client 
-
+//Creating a single superbase client
 const supabase = createClient('https://iacgeepjpcpfwyewaeyo.supabase.co',process.env.SUPABASE_KEY);
 
 //Fetching Data from database

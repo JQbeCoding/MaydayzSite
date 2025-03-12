@@ -1,5 +1,8 @@
+import "dotenv/config";
+import { createClient } from '@supabase/supabase-js';
+
 const twilio = require("twilio");
-const Database = require("better-sqlite3");
+
 
 const sid = XXX;
 const atoken = XXX;

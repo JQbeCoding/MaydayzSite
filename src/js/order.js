@@ -1,3 +1,4 @@
+//Functions to open the square payments link
 function openSamplerPayment() {
   onclick(
     window.open(
