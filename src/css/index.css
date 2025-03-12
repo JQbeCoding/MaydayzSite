@@ -4,7 +4,7 @@
     font-display: swap;
 }
 body{
-    background: url("assets/Images/MenuBackground.png");
+    background: url("assets/Images/webp_images/OrderBackground.webp");
     background-size:cover;
     opacity: 1;
     transition: opacity 1s ease-out;
@@ -19,7 +19,7 @@ body{
     cursor: pointer;
     display: block; 
     margin: -50px auto; 
-    background-image: url("assets/Images/Maydayz.png");
+    background-image: url("assets/Images/webp_images/Maydayz.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,10 +43,12 @@ body{
 @font-face {
     font-family: FontA;
     src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
+    font-display:swap;
 }
 @font-face {
     font-family: FontB;
     src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
+    font-display:swap;
 }
 h1{
     opacity: 0;
