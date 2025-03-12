@@ -1,19 +1,22 @@
 import "dotenv/config";
 import nodemailer from "nodemailer";
-import sqlite3 from "sqlite3";
-import { open } from "sqlite";
+import { createClient } from "@supabase/supabase-js";
 import path from "path";
 
+const supabase = createClient('https://iacgeepjpcpfwyewaeyo.supabase.co',process.env.SUPABASE_KEY);
+
 async function sendEmail() {
-  const db = await open({
-    filename: "customers.db",
-    driver: sqlite3.Database,
-  });
-
   try {
-    const rows = await db.all("SELECT email FROM customers");
+    const { data: customers, error } = await supabase
+      .from("MaydayzCustomers")
+      .select("email");
 
-    if (rows.length === 0) {
+    if (error) {
+      console.error("Supabase error fetching customers:", error);
+      return;
+    }
+
+    if (customers.length === 0) {
       console.error("No customers found in the database.");
       return;
     }
@@ -26,8 +29,8 @@ async function sendEmail() {
       },
     });
 
-    for (let row of rows) {
-      let recipientEmail = row.email;
+    for (let customer of customers) {
+      let recipientEmail = customer.email;
       if (!recipientEmail) {
         console.warn("Skipping empty email entry.");
         continue;
@@ -63,7 +66,7 @@ async function sendEmail() {
           {
             filename: "MaydayzLogo.png",
             path: path.resolve(
-              "/src/css/assets/Images/Maydayz (64 x 64 px) (Logo).png"
+              "Maydayz (64 x 64 px) (Logo).png"
             ),
             cid: "maydayzlogo",
           },
@@ -75,8 +78,6 @@ async function sendEmail() {
     }
   } catch (error) {
     console.error("Error:", error);
-  } finally {
-    await db.close();
   }
 }
 
