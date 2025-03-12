@@ -1,49 +1,27 @@
-/* Custom Fonts */
 @font-face {
     font-family: FontC;
     src: url(assets/Fonts/LTSuperior-SemiBold.otf);
     font-display: swap;
 }
-
-@font-face {
-    font-family: FontA;
-    src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: FontB;
-    src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
-    font-display: swap;
-}
-
-/* General Body */
-body {
+body{
     background: url("assets/Images/webp_images/MenuBackground.webp");
-    background-size: cover;
+    background-size:cover;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
-
-/* Logo Styling */
-#Logo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+#Logo{
+    width: 300px;
+    height: 300px;
     cursor: pointer;
-    display: block;
-    margin: -50px auto;
+    display: block; 
+    margin: -50px auto; 
     background-image: url("assets/Images/webp_images/Maydayz.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     animation: logo-fit 2s forwards;
 }
-
-/* Keyframes for Logo Animation */
 @keyframes logo-fit {
     0% {
         height: 100px;
@@ -57,32 +35,63 @@ body {
     }
 }
 
-/* Heading Styling */
-h1 {
+
+
+@font-face {
+    font-family: FontA;
+    src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
+    font-display:swap;
+}
+@font-face {
+    font-family: FontB;
+    src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
+    font-display:swap;
+}
+h1{
     opacity: 0;
     animation: appear 2s 1s forwards;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
-    font-size: 8vw;
-    text-align: center;
-    font-family: FontA;
-    color: red;
-}
+    font-size: 8vh;
+     text-align:center ;
+     font-family: FontA ;
+     color:red;
 
-h2 {
+}
+h2{
     opacity: 0;
     animation: appear 2s 2s forwards;
     font-family: FontB;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: rgb(251, 0, 0);
-    text-align: center;
-    font-size: 5vw;
-    color: white;
+    text-align:center ;
+    font-size: 5vh;
+    color:white;
     padding-bottom: 40px;
 }
+.tabs {
+    margin: 50px;
+    text-align: center;
+    opacity: 0;
+    animation: appear 2s 1s forwards;
+}
+@keyframes appear {
+    0% {
+       opacity: 0;
+        
+    }
+    100% {
+       opacity: 1;
+    }
+}
 
-/* Button Styling */
-.button {
+#Order{
+    opacity: 0;
+    animation: appear 2s 1s forwards;
+    padding: 10px;
+    margin: 10px;
+}
+.button{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -91,78 +100,39 @@ h2 {
     color: white;
     font-family: FontB;
     padding: 25px 25px;
-    font-size: 2.2vw;
+    font-size: 2.2vh;
     cursor: pointer;
     border-radius: 12px;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
 }
-
-/* Order Button Animation */
-@keyframes OrderMove {
-    0% {
-        border-bottom-right-radius: 10px;
-    }
-    50% {
-        border-bottom-right-radius: 200px;
-        background-color: white;
-        color: red;
-    }
-    100% {
-        border-bottom-right-radius: 10px;
-    }
-}
-
-/* Pride Button Animation */
-@keyframes Pride {
-    25% {
-        border-bottom-right-radius: 200px;
-        background-color: aqua;
-    }
-    35% {
-        background-color: pink;
-        color: white;
-    }
-    50% {
-        border-bottom-right-radius: 200px;
-        background-color: purple;
-        color: white;
-    }
-    75% {
-        background-color: green;
-        color: white;
-    }
-    90% {
-        background-color: yellow;
-        color: black;
-    }
-    100% {
-        background-color: red;
-    }
-}
-
-/* Hover Effect for Buttons */
-.button:hover {
-    background-color: white;
-    color: red;
-}
-
-/* Footer Styling */
-footer {
-    opacity: 0;
-    animation: appear 3s 1s forwards;
-    font-family: FontC;
-    padding-top: 50px;
-    text-align: center;
+.Pride{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border: none;
     color: white;
-    font-size: 13px;
-}
-
-.IG {
+    font-family: FontB;
+    padding: 25% 25%;
+    font-size: 15px;
     cursor: pointer;
+    animation-name:Pride;
+    animation: Pride 6s infinite
 }
-
-/* Small Tabs Styling */
+.button2{
+    background-color: #cc0000;
+    text-align: center;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    font-family: FontB;
+    font-weight: bold;
+    font-size: 20px;
+    padding:10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
 #Smalltabs {
     display: flex;
     justify-content: space-between;
@@ -174,75 +144,89 @@ footer {
     animation: appear 2s 1s forwards;
 }
 
-/* Navbar Left Styling */
+/* Group the logo, menu and about us */
 .nav-left {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Keyframe for Appear Animation */
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.button{border-radius: 12px;}
+.Pride{border-radius: 12px;}
+
+@keyframes OrderMove {
+    0% { border-bottom-right-radius: 10px;} 
+    50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
+    100%{ border-bottom-right-radius: 10px;}
 }
 
-/* Media Queries for Responsive Design */
+@keyframes Pride{
+    25%{border-bottom-right-radius: 200px ; background-color: aqua;}
+    35%{background-color: pink; color: white;}
+    50% {border-bottom-right-radius: 200px; background-color: purple; color: white;}
+    75%{background-color: green; color: white;}
+    90%{background-color: yellow; color: black;}
+    100% {background-color: red;}
+}
+.button:hover {
+    background-color: white;
+    color:red;
+}
+footer{
+opacity: 0;
+animation: appear 3s 1s forwards;
+font-family: FontC;
+padding-top: 50px;
+text-align: center;
+color: white;
+font-size: 10px;
+}
+
+.IG{
+    cursor: pointer;
+}
+
+/* Mobile Size Adjustments */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 10vw; /* Adjust font size for tablets */
+    /* --- Navigation --- */
+    #Smalltabs .nav-left a,
+    #Smalltabs #SignIn {
+      font-size: 0.9rem; /* Slightly smaller nav text */
+      padding: 5px 10px; /* Adjust padding */
     }
-    h2 {
-        font-size: 6vw; /* Adjust font size for tablets */
+  
+    .tabs #Logo {
+      /* Assuming #Logo is a background image */
+      width: 80px; /* Reduce logo size */
+      height: 80px;
     }
-    .button {
-        font-size: 3vw; /* Adjust button size for tablets */
-        padding: 20px 20px;
+  
+    /* --- Title Page --- */
+    #Title.page h1 {
+      font-size: 2.2rem; /* Reduce title font size */
+      margin-bottom: 10px; /* Adjust spacing */
     }
-    .button2 {
-        font-size: 18px;
-        padding: 8px;
+  
+    #Title.page h2 {
+      font-size: 1.3rem; /* Reduce subtitle font size */
     }
-    #Logo {
-        max-width: 250px;
+  
+    /* --- Order Button --- */
+    #Order .button {
+      font-size: 1rem; /* Adjust button text size */
+      padding: 12px 24px; /* Adjust button padding */
     }
-    #Smalltabs {
-        flex-direction: column;
-        align-items: flex-start;
+  
+    /* --- Footer --- */
+    #Footer footer p {
+      font-size: 0.8rem; /* Reduce footer text size */
     }
-    .nav-left {
-        flex-direction: column;
+  
+    #Footer footer .IG {
+      width: 12px; /* Slightly smaller IG icon */
+      height: 12px;
     }
-}
+  }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 12vw; /* Adjust font size for mobile */
-    }
-    h2 {
-        font-size: 8vw; /* Adjust font size for mobile */
-    }
-    .button {
-        font-size: 4vw; /* Adjust button size for mobile */
-        padding: 15px 15px;
-    }
-    .button2 {
-        font-size: 16px;
-        padding: 6px;
-    }
-    #Logo {
-        max-width: 200px;
-    }
-    #Smalltabs {
-        flex-direction: column;
-        align-items: center;
-    }
-    .nav-left {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
+
