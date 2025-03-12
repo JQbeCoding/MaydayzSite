@@ -2,11 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="theme-color" content="#ff5722" />
+    <link
+      rel="apple-touch-icon"
+      href="src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="MayDayz Smokn Bar-Be-Cue - Authentic BBQ flavors delivered fresh. Explore our menu and stay SMOKED OUT."
     />
+    <link rel="manifest" href="/manifest.json" />
     <title>Maydayz - We Smoked Out!</title>
     <link
       rel="icon"
@@ -69,5 +75,22 @@
       </footer>
     </div>
     <script src="/src/js/loading.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered with scope:",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
