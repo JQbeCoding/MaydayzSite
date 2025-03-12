@@ -4,7 +4,7 @@
 }
 body{
     background: url("assets/Images/MenuBackground.png");
-    background-size: auto;
+    background-size:cover;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
@@ -69,7 +69,7 @@ h2{
     color:white;
     padding-bottom: 40px;
 }
-#tabs {
+.tabs {
     margin: 50px;
     text-align: center;
     opacity: 0;
@@ -87,11 +87,7 @@ h2{
 #Smalltabs{
     opacity: 0;
     animation: appear 2s 1s forwards;
-    font-family: FontB;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: white;
-    font-size: 4vh;
-    color: black;
+    font-size: 20px;
 }
 #Order{
     opacity: 0;
@@ -138,7 +134,7 @@ h2{
     padding:10px;
 }
 #SignIn{
-    margin-left: 75%;
+    margin-left: 62.6%;
 
 }
 
