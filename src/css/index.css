@@ -186,47 +186,7 @@ font-size: 10px;
     cursor: pointer;
 }
 
-/* Mobile Size Adjustments */
-@media (max-width: 768px) {
-    /* --- Navigation --- */
-    #Smalltabs .nav-left a,
-    #Smalltabs #SignIn {
-      font-size: 0.9rem; /* Slightly smaller nav text */
-      padding: 5px 10px; /* Adjust padding */
-    }
-  
-    .tabs #Logo {
-      /* Assuming #Logo is a background image */
-      width: 80px; /* Reduce logo size */
-      height: 80px;
-    }
-  
-    /* --- Title Page --- */
-    #Title.page h1 {
-      font-size: 2.2rem; /* Reduce title font size */
-      margin-bottom: 10px; /* Adjust spacing */
-    }
-  
-    #Title.page h2 {
-      font-size: 1.3rem; /* Reduce subtitle font size */
-    }
-  
-    /* --- Order Button --- */
-    #Order .button {
-      font-size: 1rem; /* Adjust button text size */
-      padding: 12px 24px; /* Adjust button padding */
-    }
-  
-    /* --- Footer --- */
-    #Footer footer p {
-      font-size: 0.8rem; /* Reduce footer text size */
-    }
-  
-    #Footer footer .IG {
-      width: 12px; /* Slightly smaller IG icon */
-      height: 12px;
-    }
-  }
+
 
 
 
