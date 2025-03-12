@@ -121,13 +121,17 @@ h2{
     animation: Pride 6s infinite
 }
 .button2{
-    background-color: red;
+    background-color: #cc0000;
     text-align: center;
     border-radius: 10%;
     border: none;
     color: white;
     font-family: FontB;
+    font-weight: bold;
+    font-size: 20px;
     padding:10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 #Smalltabs {
     display: flex;
@@ -138,7 +142,6 @@ h2{
     box-sizing: border-box;
     opacity: 0;
     animation: appear 2s 1s forwards;
-    font-size: 20px;
 }
 
 /* Group the logo, menu and about us */
