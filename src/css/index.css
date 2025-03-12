@@ -4,14 +4,11 @@
     font-display: swap;
 }
 body{
-    background: url("assets/Images/webp_images/OrderBackground.webp");
+    background: url("assets/Images/webp_images/MenuBackground.webp");
     background-size:cover;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
-   
-
-    
 }
 #Logo{
     width: 300px;
@@ -188,3 +185,6 @@ font-size: 10px;
 .IG{
     cursor: pointer;
 }
+
+
+

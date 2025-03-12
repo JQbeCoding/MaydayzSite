@@ -20,7 +20,7 @@
 }
 
 body {
-    background: url("assets/Images/webp_images/OrderBackground.webp");
+    background: url("assets/Images/webp_images/MenuBackground.webp");
     background-size: cover;
     font-family: FontD;
     color: white; 
@@ -91,6 +91,7 @@ body {
 }
 
 footer {
+    font-family: FontD;
     font-size: 1.2vh;
 }
 

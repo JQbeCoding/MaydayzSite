@@ -6,8 +6,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
+      rel="stylesheet" 
     />
+    <link    rel="stylesheet" href="/src/css/loading.css" />
     <title>About the smoke</title>
     <link
       rel="icon"
@@ -16,6 +17,10 @@
     />
   </head>
   <body>
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+      <p id="loadingText" >Loading...</p>
+  </div>
     <div id="About">
       <p>
         Maydayz is a family owned bbq food trucked founded and owned by Edward
@@ -38,6 +43,9 @@
         <p>©2025 Maydayz Smokn Bar-Be-Cue LLC</p>
       </footer>
     </div>
+    <script src="/src/js/loading.js">
+
+    </script>
   </body>
   <style>
     @font-face {

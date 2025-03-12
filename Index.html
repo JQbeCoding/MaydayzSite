@@ -9,7 +9,8 @@
       type="x-icon"
       href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico"
     />
-    <link rel="Stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/loading.css"/>
   </head>
   <div id="Smalltabs">
     <div class="nav-left">
@@ -30,6 +31,10 @@
   </div>
   <!--The main page design-->
   <body>
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+      <p id="loadingText" >Loading...</p>
+  </div>
     <div id="Title page">
       <h1>Welcome to Maydayz</h1>
       <h2>WE SMOKED OUT</h2>
@@ -54,5 +59,7 @@
         </p>
       </footer>
     </div>
+    <script src="/src/js/loading.js">
+    </script>
   </body>
 </html>
