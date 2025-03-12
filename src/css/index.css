@@ -1,6 +1,7 @@
 @font-face {
     font-family: FontC;
     src: url(assets/Fonts/LTSuperior-SemiBold.otf);
+    font-display: swap;
 }
 body{
     background: url("assets/Images/MenuBackground.png");
@@ -28,12 +29,12 @@ body{
     0% {
         height: 100px;
         width: 100px;
-        background-image: url("assets/Images/Maydayz.png");
+        background-image: url("/src/html/assets/Images/Maydayz.webp");
     }
     100% {
         height: 400px;
         width: 400px;
-        background-image: url("assets/Images/Maydayz.png");
+        background-image: url("/src/html/assets/Images/Maydayz.webp");
     }
 }
 

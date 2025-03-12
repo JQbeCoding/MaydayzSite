@@ -1,15 +1,18 @@
 @font-face {
     font-family: FontA ;
     src: url(assets/Fonts/FIRES\ PERSONAL\ USE.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: FontB ;
     src: url(assets/Fonts/Ricebox\ Allcaps.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: FontC;
     src: url(assets/Fonts/Pridi-Bold.ttf);
+    font-display: swap;
 }
 
 body{
