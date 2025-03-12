@@ -17,10 +17,11 @@
 @font-face {
     font-family: FontD;
     src: url(assets/Fonts/LTSuperior-SemiBold.otf);
+    font-display: swap;
 }
 
 body{
-    background: url("assets/Images/MenuBackground.png");
+    background: url("assets/Images/webp_images/OrderBackground.webp");
     background-size: cover;
 }
 h1{
