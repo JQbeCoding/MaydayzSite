@@ -45,9 +45,6 @@ app.get("/", (request, response) => {
 
 // Handle the /signup POST request
 app.post("/signup", async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://maydayz.netlify.app');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   try {
     //Reads from the Supabase Postgre DB
     const { data, error } = await supabase
