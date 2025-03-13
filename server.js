@@ -29,7 +29,6 @@ app.use(express.static(path.join(__dirname)));
 const corsOptions = {
     origin: [
     'https://www.maydayz.com',
-    'http://maydayz.com',
     'https://maydayzsite.onrender.com',
     'http://localhost:3000'
     ]
@@ -46,6 +45,9 @@ app.get("/", (request, response) => {
 
 // Handle the /signup POST request
 app.post("/signup", async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://maydayz.com');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   try {
     //Reads from the Supabase Postgre DB
     const { data, error } = await supabase
