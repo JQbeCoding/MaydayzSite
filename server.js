@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname)));
 //First instance of cors. Reads from all enviornments
 const corsOptions = {
     origin: [
-    'https://maydayz.netlify.app/',
+    'https://maydayz.com/',
     'https://maydayzsite.onrender.com',
     'http://localhost:3000'
     ]
