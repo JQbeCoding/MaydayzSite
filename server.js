@@ -30,6 +30,7 @@ const corsOptions = {
     origin: [
     'https://www.maydayz.com',
     'https://maydayzsite.onrender.com',
+    'http://localhost:3000'
     ]
   };
   app.use(cors(corsOptions));
