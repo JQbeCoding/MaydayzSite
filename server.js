@@ -29,9 +29,8 @@ app.use(express.static(path.join(__dirname)));
 //First instance of cors. Reads from all enviornments
 const corsOptions = {
     origin: [
-    //To be replaced with 'https://www.maydayz.com'
-      'https://superb-dango-5693f1.netlify.app',
-      'https://maydayzsite.onrender.com',
+    'https://www.maydayz.com',
+    'https://maydayzsite.onrender.com',
     ]
   };
   app.use(cors(corsOptions));
