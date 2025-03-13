@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname)));
 const corsOptions = {
     origin: [
     'https://www.maydayz.com',
+    'http://maydayz.com',
     'https://maydayzsite.onrender.com',
     'http://localhost:3000'
     ]
