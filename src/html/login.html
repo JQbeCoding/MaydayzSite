@@ -88,6 +88,7 @@
               window.location.href = '/Index.html'; 
             } else {
               const errorMessage = await response.text();
+              console.log(response);
               alert(`Signup failed: ${errorMessage}`);
             }
           } catch (error) {
