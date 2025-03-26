@@ -27,14 +27,13 @@ app.use(express.static(path.join(__dirname)));
 
 //First instance of cors. Reads from all enviornments
 const corsOptions = {
-    origin: [
-    'https://maydayz.com',
-    'https://maydayzsite.onrender.com',
-    'http://localhost:3000'
-    ]
-  };
-  app.use(cors(corsOptions));
-
+  origin: [
+    "https://maydayz.com",
+    "https://maydayzsite.onrender.com",
+    "http://localhost:3000",
+  ],
+};
+app.use(cors(corsOptions));
 
 //Retrieves the Index file
 app.get("/", (request, response) => {
