@@ -6,6 +6,7 @@
 body{
     background: url("assets/Images/webp_images/MenuBackground.webp");
     background-size:cover;
+    background-color: black;
     opacity: 1;
     transition: opacity 1s ease-out;
     justify-content: center;
