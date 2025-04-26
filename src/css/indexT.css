@@ -9,6 +9,7 @@
     font-family: FontA;
     src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
     font-display: swap;
+    background-color: black;
 }
 
 @font-face {

@@ -23,6 +23,7 @@
 body{
     background: url("assets/Images/webp_images/MenuBackground.webp");
     background-size: cover;
+    background-color: black;
 }
 h1{
     font-family: FontA;

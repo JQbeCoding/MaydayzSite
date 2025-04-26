@@ -21,6 +21,7 @@
 
 body {
     background: url("assets/Images/webp_images/MenuBackground.webp");
+    background-color: black;
     background-size: cover;
     font-family: FontD;
     color: white; 
