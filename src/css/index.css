@@ -70,6 +70,9 @@ h2{
     color:white;
     padding-bottom: 40px;
 }
+a{
+    text-decoration: none;
+}
 .tabs {
     margin: 50px;
     text-align: center;
@@ -91,6 +94,7 @@ h2{
     animation: appear 2s 1s forwards;
     padding: 10px;
     margin: 10px;
+    
 }
 .button{
     position: absolute;
@@ -106,6 +110,7 @@ h2{
     border-radius: 12px;
     animation-name: OrderMove;
     animation: OrderMove 4s infinite;
+    
 }
 .Pride{
     position: absolute;
