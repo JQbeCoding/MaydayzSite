@@ -123,3 +123,13 @@ function paymentTest() {
     )
   );
 }
+
+function openTurkeyPlatePayment() {
+  onclick(
+    window.open(
+      "https://square.link/u/7fKhbrnY",
+      "Turkey Plate",
+      "width=500,height=500,top=150,left=375"
+    )
+  );
+}
