@@ -136,8 +136,6 @@ a{
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
-    opacity: 0;
-    animation: appear 2s 1s forwards;
 }
 .Soxiety{
     font-family: FontC;
