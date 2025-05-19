@@ -53,7 +53,7 @@ h1{
     animation: appear 2s 1s forwards;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
-    font-size: 8vh;
+    font-size: 6vh;
      text-align:center ;
      font-family: FontA ;
      color:red;
@@ -89,23 +89,16 @@ a{
     }
 }
 
-#Order{
-    opacity: 0;
-    animation: appear 2s 1s forwards;
-    padding: 10px;
-    margin: 10px;
-    
-}
+
 .button{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
     /*background-color: red;*/
     border: none;
     color: white;
     font-family: FontB;
-    padding: 25px 25px;
-    font-size: 3.2em;
+    font-size: 4vh;
     /*cursor: pointer;*/
     border-radius: 12px;
     /*animation-name: OrderMove;
@@ -186,10 +179,9 @@ footer{
 opacity: 0;
 animation: appear 3s 1s forwards;
 font-family: FontC;
-padding-top: 3%;
 text-align: center;
 color: white;
-font-size: .8em;
+font-size: 2vh;
 }
 
 .IG{
