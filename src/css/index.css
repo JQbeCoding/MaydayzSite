@@ -59,7 +59,7 @@ h1{
      color:red;
 
 }
-h2{
+/*h2{
     opacity: 0;
     animation: appear 2s 2s forwards;
     font-family: FontB;
@@ -69,7 +69,7 @@ h2{
     font-size: 5vh;
     color:white;
     padding-bottom: 40px;
-}
+}*/
 a{
     text-decoration: none;
 }
@@ -100,16 +100,16 @@ a{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
+    /*background-color: red;*/
     border: none;
     color: white;
     font-family: FontB;
     padding: 25px 25px;
-    font-size: 2.2vh;
-    cursor: pointer;
+    font-size: 3.2em;
+    /*cursor: pointer;*/
     border-radius: 12px;
-    animation-name: OrderMove;
-    animation: OrderMove 4s infinite;
+    /*animation-name: OrderMove;
+    animation: OrderMove 4s infinite;*/
     
 }
 .Pride{
@@ -136,6 +136,7 @@ a{
     font-weight: bold;
     font-size: 20px;
     padding:10px;
+    margin-bottom: -3%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     text-decoration: none;
 }
@@ -148,6 +149,12 @@ a{
     box-sizing: border-box;
     opacity: 0;
     animation: appear 2s 1s forwards;
+}
+.Soxiety{
+    font-family: FontC;
+}
+#red{
+    color: red;
 }
 
 /* Group the logo, menu and about us */
@@ -174,18 +181,15 @@ a{
     90%{background-color: yellow; color: black;}
     100% {background-color: red;}
 }
-.button:hover {
-    background-color: white;
-    color:red;
-}
+
 footer{
 opacity: 0;
 animation: appear 3s 1s forwards;
 font-family: FontC;
-padding-top: 50px;
+padding-top: 3%;
 text-align: center;
 color: white;
-font-size: 10px;
+font-size: .8em;
 }
 
 .IG{
