@@ -35,6 +35,13 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+app.get("/", (request, response) => {
+  response.setHeader("Cache-Control", "no-cache, must-revalidate");
+  response.setHeader("Pragma", "no-cache");
+  response.setHeader("Expires", "0");
+  response.sendFile(path.join(__dirname, "Index.html"));
+});
+
 //Retrieves the Index file
 app.get("/", (request, response) => {
   response.sendFile(path.join(__dirname, "Index.html"));
