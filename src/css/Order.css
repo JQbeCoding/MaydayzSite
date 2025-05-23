@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: FontB;
     src: url("assets/Fonts/Ricebox\ Allcaps.ttf");
@@ -28,14 +27,14 @@ body{
 h1{
     font-family: FontA;
     text-align: center;
-    font-size: 8vh;
+    font-size: 6vh;
     color: red;
     -webkit-text-stroke-width: .5px ;
     -webkit-text-stroke-color:gold;
 }
 h2{
     text-align: center;
-    font-size: 5vh;
+    font-size: 4vh;
     font-family: FontB;
     color: gold;
 }
@@ -49,14 +48,14 @@ h2{
     justify-content: space-around;
     padding: 120px;
 }
-.Tabs{
-    font-family: FontB;
-    font-size: 5vh;
-    color: red;
-    padding: auto;
+#tabs-section {
+    padding: 10px 0;
+}
+
+.Tabs {
     display: flex;
-    justify-content: space-around;
-    text-decoration: none;
+    justify-content: center;
+    gap: 5%;
 }
 #tab:hover{
     background-color: gold;
@@ -79,38 +78,16 @@ a:visited{
     justify-content: space-around;
     padding: 120px;
 }
-footer{
-    font-family:FontD;
-    color: white;
-    text-align: right;
-    font-size: 13px;
-    margin-top: 100px;
-
-}
-#Footer {
-    padding: 10px;   
-    margin: 23px, 5px;
-    width: auto;
-}
-
-#Items{
-    display:flex;
-    justify-content:space-around;
-}
 
 .Items{
-    padding:30px;
-    margin: 100px 2px;
-    background-color: red;
-    text-align: center;
-    align-items: center;
-    height:280px;
-    width:250px;
-    font-size: 35px;
-    font-family: FontB;
+    width: 250px;
+    height: 250px;
     padding: 40px;
-    cursor: pointer;
     border-radius: 12px;
+    background-color: red;
+    color: gold;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .Items:hover{
@@ -151,39 +128,50 @@ footer{
     font-size: 30px;
 }
 
-#FeaturedItems{
-    display: flex;
-    justify-content: space-around;
+#featured-items-section {
+    text-align: center;
+    padding: 20px;
 }
 
-.FeaturedItems{
-    padding:30px;
-    margin: 4px 2px;
+#FeaturedItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    font-size: 3vh;
+}
+
+.FeaturedItems {
+    width: 250px;
+    height: 250px;
+    padding: 40px;
+    border-radius: 12px;
     background-color: red;
     color: gold;
     text-align: center;
-    align-items: center;
-    height:280px;
-    width:250px;
-    font-size: 35px;
-    font-family: FontB;
-    padding: 40px;
     cursor: pointer;
-    border-radius: 12px;
-    animation-name: FeaturedMove;
-    animation: FeaturedMove 3s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: FeaturedMove 5s infinite;
 }
+
+.FeaturedItems:hover {
+    background-color: gold;
+    color: red;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 
 @keyframes FeaturedMove {
     50%{background-color: gold; color: red}
 }
 
 .back{
-    padding: 10px 10px;
+    padding: 10px;
+    margin-top: 100px;
     font-family: FontA;
     background-color: red;
     color: white;
-    margin-bottom: 10px 20px 100px ;
 }
 .back:visited{
     color: white;
@@ -191,9 +179,119 @@ footer{
     background-color: red;
     padding: 10px 10px;
     margin: 10px -200px 10px;
+    margin-top: 100px;
 }
 
 .IG{
     cursor: pointer;
 }
 
+section {
+    padding: 20px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+#header-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#header-section h1 {
+    font-size: 5vh;
+    color: red;
+    -webkit-text-stroke: 1px gold;
+}
+
+/* Platez Section */
+#platez-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#platez-section h2 {
+    font-family: FontB;
+    font-size: 4vh;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 5%; /* Space between items */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.item {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: gold;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.item img {
+    max-width: 250px;
+    height: 150px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.item h3 {
+    font-family: FontA;
+    font-size: 2.5vh;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: FontC;
+    font-size: 2vh;
+    color: red;
+}
+
+/* Footer */
+footer {
+    font-family: FontD;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.5vh;
+}
+
+.Pre-Order{
+    font-size: 45px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: red;
+    font-family: FontB;
+    text-align: center;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .items-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%;
+    }
+}

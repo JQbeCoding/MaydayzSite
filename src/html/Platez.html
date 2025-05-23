@@ -2,42 +2,59 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "Stylesheet" href = "/src/css/Order.css">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <link rel="stylesheet" href="/src/css/Order.css">
         <title>Ready To Take Your Order</title>
-        <link rel = "icon" type = "x-icon" href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico">
+        <link rel="icon" type="x-icon" href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico">
     </head>
-    <a href ="order.html" class = "back"> Go Back</a>
     <body>
+        <!-- Back Button -->
+        <a href="order.html" class="back">Go Back</a>
 
-        <div id = "Items">
-            <ul class ="Items" onclick= openRibPlatePayment()> Ribz
-                <img src = "/src/css/assets/Images/Resized_Resized_20240629_131046.jpeg" 
-                width ="200px" height="200px" alt="Ribs">
-                <div id = "prices">
-                    $22.00
-            </ul>
-            <ul class = "Items" onclick = openPulledPorkPayment()>Pulled Pork
-                <img src = "/src/css/assets/Images/Pulled_Pork.jpg" 
-                width ="200px" height="200px" alt="pulledpork">
-                <div id = "prices">
-                    $22.00
-            </ul>
-            <ul class = "Items" onclick = openChickenPayment()>Wingz
-                 <img src = "/src/css/assets/Images/original.jpeg" 
-                        width ="200px" height="200px" alt="wings">
-                    <div id = "prices">
-                    $22.00
-            </ul>
-            
-        </div>
-        <div id ="Footer">
-            <footer>
-                <p>Author: Soxiety Technology Solutions<br>
-                ©2025 Maydayz Smokn Bar-Be-Cue LLC</p>
-            </footer>
-        </div>
-        <script 
-            src = "/src/js/order.js">
-        </script>
+        <!-- Platez Section -->
+        <section id="platez-section">
+            <h2>Platez</h2>
+            <h3 class="Pre-Order">PRE-ORDER!!</h3>
+            <div class="items-container">
+                <!-- Ribz Item -->
+                <div class="item">
+                    <a onclick="openRibPlatePayment()">
+                        <h3>Ribz</h3>
+                        <img src="/src/css/assets/Images/Resized_Resized_20240629_131046.jpeg" 
+                             alt="Ribs">
+                        <div class="price">$22.00</div>
+                    </a>
+                </div>
+
+                <!-- Pulled Pork Item -->
+                <div class="item">
+                    <a  onclick="openPulledPorkPayment()">
+                        <h3>Pulled Pork</h3>
+                        <img src="/src/css/assets/Images/Pulled_Pork.jpg" 
+                             alt="Pulled Pork">
+                        <div class="price">$22.00</div>
+                    </a>
+                </div>
+
+                <!-- Wingz Item -->
+                <div class="item">
+                    <a  onclick="openChickenPayment()">
+                        <h3>Wingz</h3>
+                        <img src="/src/css/assets/Images/original.jpeg" 
+                             alt="Wings">
+                        <div class="price">$22.00</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Author: Soxiety Technology Solutions<br>
+            ©2025 Maydayz Smokn Bar-Be-Cue LLC</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="/src/js/order.js"></script>
     </body>
 </html>
