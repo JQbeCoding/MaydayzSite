@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website with Loading Screen</title>
-    <link rel="stylesheet" href="/src/css/loading.css"> </head>
-<body>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PN5PZ1Z3KG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-PN5PZ1Z3KG");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website with Loading Screen</title>
+    <link rel="stylesheet" href="/src/css/loading.css" />
+  </head>
+  <body>
     <div id="loading-screen">
-        <div class="loading-spinner"></div>
-        <p>Loading...</p>
+      <div class="loading-spinner"></div>
+      <p>Loading...</p>
     </div>
 
     <div id="content">
-        <h1>Welcome to My Website!</h1>
-        <p>This is the main content of the page. It will be displayed after the loading screen disappears.</p>
+      <h1>Welcome to My Website!</h1>
+      <p>
+        This is the main content of the page. It will be displayed after the
+        loading screen disappears.
+      </p>
     </div>
 
-    <script src="js/script.js"></script> </body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

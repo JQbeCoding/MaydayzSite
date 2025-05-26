@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PN5PZ1Z3KG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PN5PZ1Z3KG");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maydayz - Sign Up</title>
-    <link rel="icon" type="image/x-icon" href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/css/assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico"
+    />
     <link rel="stylesheet" href="/src/css/login.css" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/css/loading.css"/>
+    <link rel="stylesheet" href="/src/css/loading.css" />
   </head>
   <body>
     <div id="loading-screen">
       <div class="loading-spinner"></div>
-      <p id="loadingText" >Loading...</p>
-  </div>
+      <p id="loadingText">Loading...</p>
+    </div>
     <div id="Smalltabs">
       <a href="/index.html">
-        <img src="/src/css/assets/Images/webp_images/Maydayz.webp" width="200px" height="200px" alt="Maydayz Logo" />
+        <img
+          src="/src/css/assets/Images/webp_images/Maydayz.webp"
+          width="200px"
+          height="200px"
+          alt="Maydayz Logo"
+        />
       </a>
       <div class="signup-container">
         <form id="signupForm">
@@ -26,18 +49,23 @@
           <input type="email" id="email" name="email" required /><br /><br />
 
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phoneNumber" required /><br /><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phoneNumber"
+            required
+          /><br /><br />
 
           <label>
             <input type="checkbox" id="emailOptIn" name="emailOptIn" />
-            Yes, I would like to receive email updates from Maydayz.
-          </label><br />
+            Yes, I would like to receive email updates from Maydayz. </label
+          ><br />
 
           <label>
             <input type="checkbox" id="smsOptIn" name="smsOptIn" />
-            Yes, I would like to receive SMS alerts from Maydayz. Reply STOP to unsubscribe.
-          </label><br />
-
+            Yes, I would like to receive SMS alerts from Maydayz. Reply STOP to
+            unsubscribe. </label
+          ><br />
 
           <button type="submit">Submit</button>
         </form>
@@ -45,16 +73,19 @@
       <p id="transparency">
         Maydayz will use the provided information for promotional purposes only.
         <br />
-        Signing up confirms you will receive text and email updates from Maydayz.
+        Signing up confirms you will receive text and email updates from
+        Maydayz.
         <br />
         For any questions, call 980-499-8399.
         <br />
-        <br>
+        <br />
         WE SMOKED OUT!!
       </p>
       <div class="parent">
-        <a id="privacy" onclick="window.open('privacy-policy.html')">Privacy Policy</a>
-    </div>
+        <a id="privacy" onclick="window.open('privacy-policy.html')"
+          >Privacy Policy</a
+        >
+      </div>
 
       <div id="Footer">
         <footer>
@@ -75,47 +106,52 @@
       <!--Script for login logic-->
       <script>
         //Creates a sign up form
-        const signupForm = document.getElementById('signupForm');
+        const signupForm = document.getElementById("signupForm");
 
         //Takes the information given by user
-        signupForm.addEventListener('submit', async (event) => {
+        signupForm.addEventListener("submit", async (event) => {
           event.preventDefault();
 
           const formData = new FormData(signupForm);
           const formDataObject = Object.fromEntries(formData);
 
           // Format the phone number
-          if (formDataObject.phoneNumber && !formDataObject.phoneNumber.startsWith('+1')) {
-            formDataObject.phoneNumber = '+1' + formDataObject.phoneNumber;
+          if (
+            formDataObject.phoneNumber &&
+            !formDataObject.phoneNumber.startsWith("+1")
+          ) {
+            formDataObject.phoneNumber = "+1" + formDataObject.phoneNumber;
           }
 
           //Goes to the backend and shares the information
           try {
-            const response = await fetch('https://maydayzsite.onrender.com/signup', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formDataObject),
-            });
+            const response = await fetch(
+              "https://maydayzsite.onrender.com/signup",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formDataObject),
+              }
+            );
 
             //Gives the user feedback into the file
             if (response.ok) {
-              alert('Signup successful!');
-              window.location.href = '/Index.html'; 
+              alert("Signup successful!");
+              window.location.href = "/Index.html";
             } else {
               const errorMessage = await response.text();
               console.log(response);
               alert(`Signup failed: ${errorMessage}`);
             }
           } catch (error) {
-            console.error('Error during signup:', error);
-            alert('An error occurred during signup.');
+            console.error("Error during signup:", error);
+            alert("An error occurred during signup.");
           }
         });
       </script>
-      <script src="/src/js/loading.js">
-      </script>
+      <script src="/src/js/loading.js"></script>
     </div>
   </body>
 </html>
