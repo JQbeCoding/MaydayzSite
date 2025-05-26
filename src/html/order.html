@@ -2,61 +2,75 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache">
         <link rel="stylesheet" href="/src/css/Order.css">
         <title>Ready To Take Your Order</title>
         <link rel="icon" type="image/x-icon" href="assets/Images/maydayz__64_x_64_px___logo__lLA_icon.ico"/>
         <link rel="stylesheet" href="/src/css/loading.css"/>
     </head>
     <body>
-        <div id="loading-screen">
-            <div class="loading-spinner"></div>
-            <p id="loadingText" >Loading...</p>
-        </div>
-        <a href="/Index.html">
-            <img src="assets/Images/webp_images/Maydayz.webp" width="100px" height="100px" alt="Maydayz Logo">
-        </a>
-        <h1>WE REALLY SMOKED OUT</h1>
+        <!-- Loading Screen Section -->
+        <section id="loading-screen-section">
+            <div id="loading-screen">
+                <div class="loading-spinner"></div>
+                <p id="loadingText">Loading...</p>
+            </div>
+        </section>
 
-        <div class="Tabs">
-            <a id = "tab" href="/src/html/Platez.html">Platez</a>
-            <a id = "tab" href="/src/html/Appz.html">Appz</a>
-            <a id = "tab" href="/src/html/Dessert.html">Desserts</a>
-        </div>
-        <h2>*Featured Items*</h2>
-        <div id = "FeaturedItems">
-                <ul class = "FeaturedItems" onclick= openSamplerPayment()>
+        <!-- Header Section -->
+        <section id="header-section">
+            <a href="/Index.html">
+                <img src="assets/Images/webp_images/Maydayz.webp" width="200px" height="200px" alt="Maydayz Logo">
+            </a>
+            <h1>WE REALLY SMOKED OUT</h1>
+        </section>
+
+        <!-- Navigation Tabs Section -->
+        <section id="tabs-section">
+            <div class="Tabs">
+                <a id="tab" href="/src/html/Platez.html">Platez</a>
+                <a id="tab" href="/src/html/Appz.html">Appz</a>
+                <a id="tab" href="/src/html/Dessert.html">Desserts</a>
+            </div>
+        </section>
+
+        <!-- Featured Items Section -->
+        <section id="featured-items-section">
+            <h2>*Featured Items*</h2>
+            <div id="FeaturedItems">
+                <a class="FeaturedItems" onclick="openSamplerPayment()">
                     Da Sampler
-                    <img src = "assets/Images/Resized_Resized_20240629_131046.jpeg" 
-                    width ="200px" height="200px">
-                    <div id = "prices">   
-                        $32.00
-                </ul>
-                <ul class = "FeaturedItems" onclick = openTurkeyPlatePayment()>
+                    <img src="assets/Images/Resized_Resized_20240629_131046.jpeg" 
+                    width="200px" height="200px">
+                    <div id="prices">$32.00</div>
+                </a>
+                <a class="FeaturedItems" onclick="openTurkeyPlatePayment()">
                     *Smoked Turkey*
-                    <img src = "/src/css/assets/Images/Turkey2.jpg" 
-                    width ="200px" height="200px">
-                    <div id = "prices">   
-                        $22.00
-                </ul>
+                    <img src="/src/css/assets/Images/Turkey2.jpg" 
+                    width="200px" height="200px">
+                    <div id="prices">$22.00</div>
+                </a>
+            </div>
+        </section>
 
-         </div>
-        <div id="Footer" class = "footer">
-            <footer>
-                <p>
-                    <img class = "IG" src = "assets/Images/webp_images/IG.webp" height = "10px" width = "10px" 
-                    onclick = "window.open
-                    ('https://www.instagram.com/maydayz_bbq/')" alt="instagram">
-                     Author: Soxiety Technology Solutions<br>
-                    ©2025 Maydayz Smokn Bar-Be-Cue LLC
-                </p>
-            </footer>
-        <script
-            src = "/src/js/order.js">
-        </script>
-        
-        <script 
-                src = "/src/js/loading.js">
-            </script>
-        </div>
+        <!-- Footer Section -->
+        <section id="footer-section">
+            <div class="footer">
+                <footer>
+                    <p>
+                        <img class="IG" src="assets/Images/webp_images/IG.webp" height="10px" width="10px" 
+                        onclick="window.open('https://www.instagram.com/maydayz_bbq/')" alt="instagram">
+                        Author: Soxiety Technology Solutions<br>
+                        ©2025 Maydayz Smokn Bar-Be-Cue LLC
+                    </p>
+                </footer>
+            </div>
+        </section>
+
+        <!-- Scripts Section -->
+        <section id="scripts-section">
+            <script src="/src/js/order.js"></script>
+            <script src="/src/js/loading.js"></script>
+        </section>
     </body>
 </html>
