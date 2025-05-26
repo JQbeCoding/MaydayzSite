@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PN5PZ1Z3KG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PN5PZ1Z3KG");
+    </script>
     <meta name="theme-color" content="#ff5722" />
     <link
       rel="apple-touch-icon"
@@ -21,31 +35,31 @@
     />
     <link rel="stylesheet" href="src/css/index-v1-MD-25-1.css" />
     <link rel="stylesheet" href="src/css/loading.css" />
-    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache" />
   </head>
-  <div id="Smalltabs">
-    <div class="nav-left">
-      <!--Default Logo-->
-      <a href="./Index.html">
-        <img
-          src="src/html/assets/Images/Maydayz.webp"
-          width="100px"
-          height="100px"
-          alt="Maydayz Logo"
-        />
-      </a>
-      <!--Visible tabs-->
-      <a href="./src/html/aboutUs.html" class="button2">About Us</a>
-    </div>
-    <a href="./src/html/login.html" id="SignIn" class="button2">SIGN UP</a>
-  </div>
-  <div class="tabs">
-    <a href="./Index.html">
-      <div id="Logo"></div>
-    </a>
-  </div>
-  <!--The main page design-->
   <body>
+    <div id="Smalltabs">
+      <div class="nav-left">
+        <!--Default Logo-->
+        <a href="./Index.html">
+          <img
+            src="src/html/assets/Images/Maydayz.webp"
+            width="100px"
+            height="100px"
+            alt="Maydayz Logo"
+          />
+        </a>
+        <!--Visible tabs-->
+        <a href="./src/html/aboutUs.html" class="button2">About Us</a>
+      </div>
+      <a href="./src/html/login.html" id="SignIn" class="button2">SIGN UP</a>
+    </div>
+    <div class="tabs">
+      <a href="./Index.html">
+        <div id="Logo"></div>
+      </a>
+    </div>
+    <!--The main page design-->
     <div id="loading-screen">
       <div class="loading-spinner"></div>
       <p id="loadingText">Loading...</p>
@@ -54,26 +68,25 @@
       <h1>Welcome to Maydayz</h1>
     </div>
     <div id="Order">
-      <h2 class="button" style="text-decoration: none"
-        >WE WILL SEE YOU SOON!!!</h2
-      >
+      <h2 class="button" style="text-decoration: none">
+        WE WILL SEE YOU SOON!!!
+      </h2>
     </div>
     <div id="Footer">
       <footer>
         <p>
-          Site created by: <br> <p class = "Soxiety">SO<span id = "red">XI</span>ETY</p>
+          Site created by:<br />
+          <span class="Soxiety">SO<span id="red">XI</span>ETY</span><br />
           ©2025 Maydayz Smokn Bar-Be-Cue LLC
         </p>
         <img
-        class="IG"
-        src="src/css/assets/Images/webp_images/IG.webp"
-        alt="instagram"
-        height="40px"
-        width="40px"
-        onclick="window.open
-            ('https://www.instagram.com/maydayz_bbq/')"
-      />
-        <p>
+          class="IG"
+          src="src/css/assets/Images/webp_images/IG.webp"
+          alt="instagram"
+          height="40px"
+          width="40px"
+          onclick="window.open('https://www.instagram.com/maydayz_bbq/')"
+        />
       </footer>
     </div>
     <script src="/src/js/loading.js"></script>
