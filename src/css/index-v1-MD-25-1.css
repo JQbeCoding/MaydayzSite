@@ -16,28 +16,13 @@ body{
     height: 300px;
     cursor: pointer;
     display: block; 
-    margin: auto; 
+    margin: -50px auto; 
     background-image: url("assets/Images/webp_images/Maydayz.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: logo-fit 2s forwards;
+
 }
-@keyframes logo-fit {
-    0% {
-        height: 100px;
-        width: 100px;
-        background-image: url("/src/html/assets/Images/Maydayz.webp");
-    }
-    100% {
-        height: 400px;
-        width: 400px;
-        background-image: url("/src/html/assets/Images/Maydayz.webp");
-    }
-}
-
-
-
 @font-face {
     font-family: FontA;
     src: url("assets/Fonts/FIRES\ PERSONAL\ USE.ttf");
@@ -49,8 +34,6 @@ body{
     font-display:swap;
 }
 h1{
-    opacity: 0;
-    animation: appear 2s 1s forwards;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color: white;
     font-size: 6vh;
@@ -59,58 +42,23 @@ h1{
      color:red;
 
 }
-h2{
-    opacity: 0;
-    animation: appear 2s 2s forwards;
-    font-family: FontB;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: rgb(251, 0, 0);
-    text-align:center ;
-    font-size: 5vh;
-    color:white;
-    padding-bottom: 40px;
-}
 a{
     text-decoration: none;
 }
 .tabs {
     margin: 50px;
     text-align: center;
-    opacity: 0;
-    animation: appear 2s 1s forwards;
-}
-@keyframes appear {
-    0% {
-       opacity: 0;
-        
-    }
-    100% {
-       opacity: 1;
-    }
 }
 
-#Order{
-    opacity: 0;
-    animation: appear 2s 1s forwards;
-    padding: 10px;
-    margin: 10px;
-    
-}
 .button{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
     border: none;
     color: white;
     font-family: FontB;
-    padding: 25px 25px;
-    font-size: 2.2vh;
-    cursor: pointer;
+    font-size: 4vh;
     border-radius: 12px;
-    animation-name: OrderMove;
-    animation: OrderMove 4s infinite;
-    
 }
 .Pride{
     position: absolute;
@@ -136,6 +84,7 @@ a{
     font-weight: bold;
     font-size: 20px;
     padding:10px;
+    margin-bottom: -3%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     text-decoration: none;
 }
@@ -146,8 +95,12 @@ a{
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
-    opacity: 0;
-    animation: appear 2s 1s forwards;
+}
+.Soxiety{
+    font-family: FontC;
+}
+#red{
+    color: red;
 }
 
 /* Group the logo, menu and about us */
@@ -160,34 +113,15 @@ a{
 .button{border-radius: 12px;}
 .Pride{border-radius: 12px;}
 
-@keyframes OrderMove {
-    0% { border-bottom-right-radius: 10px;} 
-    50%{border-bottom-right-radius: 200px; background-color: white; color: red;}
-    100%{ border-bottom-right-radius: 10px;}
-}
-
-@keyframes Pride{
-    25%{border-bottom-right-radius: 200px ; background-color: aqua;}
-    35%{background-color: pink; color: white;}
-    50% {border-bottom-right-radius: 200px; background-color: purple; color: white;}
-    75%{background-color: green; color: white;}
-    90%{background-color: yellow; color: black;}
-    100% {background-color: red;}
-}
-.button:hover {
-    background-color: white;
-    color:red;
-}
 footer{
-opacity: 0;
-animation: appear 3s 1s forwards;
 font-family: FontC;
-padding-top: 50px;
 text-align: center;
 color: white;
-font-size: 10px;
+font-size: 2vh;
 }
 
 .IG{
     cursor: pointer;
 }
+
+
